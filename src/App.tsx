@@ -68,7 +68,7 @@ function App() {
             <div className="flex items-center">
               <div className="flex items-center">
                 <img 
-                  src="/images/cleeng-logo.png" 
+                  src="/images/Cleeng-logo.png" 
                   alt="Cleeng Logo" 
                   className="h-8 w-auto mr-2"
                 />
