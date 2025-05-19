@@ -32,7 +32,8 @@ import {
   Zap,
   MessageSquare,
   ExternalLink,
-  DollarSign
+  DollarSign,
+  Linkedin
 } from 'lucide-react';
 
 // Import leads data
@@ -60,39 +61,39 @@ export const LeadEnrichment: React.FC = () => {
   // Enrichment provider configuration
   const [enrichmentProviders, setEnrichmentProviders] = useState([
     {
-      id: 'knoxengage',
-      name: 'KnoxEngage Intelligence',
+      id: 'cleengage',
+      name: 'Cleengage Intelligence',
       enabled: true,
       priority: 1,
       costPerLead: 0.08,
-      description: 'Our in-house AI enrichment with basic company and security data',
-      features: ['Company data', 'Security profile', 'Basic firmographics', 'AI-driven insights'],
-      dataPoints: ['Name', 'Email', 'Company', 'Title', 'Industry', 'Company Size', 'Location', 'Security Posture'],
+      description: 'Our in-house AI enrichment with basic company data',
+      features: ['Company data', 'Basic firmographics', 'AI-driven insights'],
+      dataPoints: ['Name', 'Email', 'Company', 'Title', 'Industry', 'Company Size', 'Location'],
       logo: ''
-    },
-    {
-      id: 'leadgenius',
-      name: 'LeadGenius',
-      enabled: true,
-      priority: 2,
-      costPerLead: 0.25,
-      description: 'Premium data provider with enhanced intelligence and accuracy',
-      features: ['Advanced firmographics', 'Technographics', 'Intent data', '95%+ accuracy'],
-      dataPoints: ['Contact details', 'Direct dial phones', 'Job function', 'Technologies used', 'Security tools', 'Purchase intent'],
-      logo: '/images/leadgenius logo.jpeg',
-      documentationUrl: 'https://docs.leadgenius.com/#leadgenius-api-docs'
     },
     {
       id: 'apollo',
       name: 'Apollo.io',
-      enabled: false,
-      priority: 3,
+      enabled: true,
+      priority: 2,
       costPerLead: 0.15,
       description: 'Large contact database with good coverage across industries',
       features: ['200M+ contacts', 'Job change alerts', 'Buying intent signals', 'Affordable pricing'],
       dataPoints: ['Contact information', 'Social profiles', 'Department', 'Seniority', 'Company funding'],
       logo: '/images/Apollo logo.png',
       documentationUrl: 'https://docs.apollo.io/docs/api-overview'
+    },
+    {
+      id: 'leadgenius',
+      name: 'LeadGenius',
+      enabled: false,
+      priority: 3,
+      costPerLead: 0.25,
+      description: 'Premium data provider with enhanced intelligence and accuracy',
+      features: ['Advanced firmographics', 'Technographics', 'Intent data', '95%+ accuracy'],
+      dataPoints: ['Contact details', 'Direct dial phones', 'Job function', 'Technologies used', 'Purchase intent'],
+      logo: '/images/leadgenius logo.jpeg',
+      documentationUrl: 'https://docs.leadgenius.com/#leadgenius-api-docs'
     }
   ]);
 
@@ -555,7 +556,7 @@ export const LeadEnrichment: React.FC = () => {
                         ))}
                       </select>
                     </div>
-                    {provider.enabled && provider.id !== 'knoxengage' && (
+                    {provider.enabled && provider.id !== 'cleengage' && (
                       <Button
                         variant="outline"
                         size="sm"
@@ -601,7 +602,7 @@ export const LeadEnrichment: React.FC = () => {
         <div className="mb-4">
           <h4 className="text-sm font-medium text-gray-700 mb-2">Enrichment Method</h4>
           <select
-            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-cleeng-blue-500 focus:border-transparent"
             value={activeProvider}
             onChange={(e) => setActiveProvider(e.target.value)}
           >
@@ -655,7 +656,7 @@ export const LeadEnrichment: React.FC = () => {
     <div>
       <div className="mb-6">
         <h2 className="text-2xl font-bold text-gray-900">Contact Enrichment</h2>
-        <p className="text-gray-600">Discover and enrich contacts with AI-powered insights</p>
+        <p className="text-gray-600">Enrich contacts with Apollo.io data and AI-powered insights</p>
       </div>
       
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
@@ -664,13 +665,13 @@ export const LeadEnrichment: React.FC = () => {
             <div className="border-b border-gray-200 mb-4">
               <div className="flex -mb-px">
                 <button
-                  className={`py-3 px-4 border-b-2 font-medium text-sm ${visibleSegments === 'segments' ? 'border-blue-600 text-blue-600' : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'}`}
+                  className={`py-3 px-4 border-b-2 font-medium text-sm ${visibleSegments === 'segments' ? 'border-cleeng-blue-600 text-cleeng-blue-600' : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'}`}
                   onClick={() => setVisibleSegments('segments')}
                 >
                   Segments
                 </button>
                 <button
-                  className={`py-3 px-4 border-b-2 font-medium text-sm ${visibleSegments === 'settings' ? 'border-blue-600 text-blue-600' : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'}`}
+                  className={`py-3 px-4 border-b-2 font-medium text-sm ${visibleSegments === 'settings' ? 'border-cleeng-blue-600 text-cleeng-blue-600' : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'}`}
                   onClick={() => setVisibleSegments('settings')}
                 >
                   Enrichment
@@ -682,20 +683,21 @@ export const LeadEnrichment: React.FC = () => {
           </Card>
           
           {visibleSegments === 'settings' && (
-            <Card title="Waterfall Enrichment">
+            <Card title="Apollo.io Integration">
               <div className="p-4 bg-blue-50 rounded-md mb-4">
                 <div className="flex items-start">
                   <Zap size={18} className="text-blue-600 mr-2 mt-0.5 flex-shrink-0" />
                   <div>
-                    <h4 className="font-medium text-blue-800 text-sm mb-1">How Waterfall Works</h4>
+                    <h4 className="font-medium text-blue-800 text-sm mb-1">How Apollo Enrichment Works</h4>
                     <p className="text-xs text-blue-700">
-                      Our waterfall enrichment process saves you money by using providers in sequence:
+                      Our Apollo.io integration enriches your contacts with:
                     </p>
-                    <ol className="mt-2 space-y-1 text-xs text-blue-700 pl-4 list-decimal">
-                      <li>First tries lower-cost, in-house data sources</li>
-                      <li>Only uses premium providers for missing data</li>
-                      <li>Automatically finds the best value based on your needs</li>
-                    </ol>
+                    <ul className="mt-2 space-y-1 text-xs text-blue-700 pl-4 list-disc">
+                      <li>Direct phone numbers and verified emails</li>
+                      <li>Company firmographics and technographics</li>
+                      <li>Buying intent signals and seniority data</li>
+                      <li>Social profiles and professional history</li>
+                    </ul>
                   </div>
                 </div>
               </div>
@@ -705,7 +707,7 @@ export const LeadEnrichment: React.FC = () => {
               <div className="space-y-3 mb-4">
                 <div>
                   <div className="flex justify-between text-sm mb-1">
-                    <span className="text-gray-600">KnoxEngage Intelligence</span>
+                    <span className="text-gray-600">Cleengage Intelligence</span>
                     <span className="font-medium text-gray-900">76%</span>
                   </div>
                   <div className="w-full h-2 bg-gray-200 rounded-full">
@@ -714,7 +716,7 @@ export const LeadEnrichment: React.FC = () => {
                 </div>
                 <div>
                   <div className="flex justify-between text-sm mb-1">
-                    <span className="text-gray-600">LeadGenius</span>
+                    <span className="text-gray-600">Apollo.io</span>
                     <span className="font-medium text-gray-900">92%</span>
                   </div>
                   <div className="w-full h-2 bg-gray-200 rounded-full">
@@ -723,11 +725,30 @@ export const LeadEnrichment: React.FC = () => {
                 </div>
                 <div>
                   <div className="flex justify-between text-sm mb-1">
-                    <span className="text-gray-600">Apollo.io</span>
+                    <span className="text-gray-600">LeadGenius</span>
                     <span className="font-medium text-gray-900">84%</span>
                   </div>
                   <div className="w-full h-2 bg-gray-200 rounded-full">
                     <div className="h-2 bg-yellow-500 rounded-full" style={{ width: '84%' }}></div>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="p-3 bg-green-50 rounded-md mb-4">
+                <div className="flex items-start">
+                  <Linkedin size={18} className="text-green-600 mr-2 mt-0.5" />
+                  <div>
+                    <h4 className="font-medium text-green-800 text-sm">LinkedIn Integration</h4>
+                    <p className="text-xs text-green-700 mt-1">
+                      Configure LinkedIn automation to automatically send connection requests to newly enriched contacts.
+                    </p>
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      className="mt-2 bg-white"
+                    >
+                      Configure LinkedIn Sync
+                    </Button>
                   </div>
                 </div>
               </div>
@@ -754,7 +775,7 @@ export const LeadEnrichment: React.FC = () => {
                     placeholder="Search contacts by name, company, or email"
                     value={searchQuery}
                     onChange={handleSearch}
-                    className="pl-10 w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="pl-10 w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-cleeng-blue-500"
                   />
                   {searchQuery && (
                     <button 
@@ -861,7 +882,7 @@ export const LeadEnrichment: React.FC = () => {
                           <div className="flex items-center">
                             <input
                               type="checkbox"
-                              className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+                              className="h-4 w-4 text-cleeng-blue-600 focus:ring-cleeng-blue-500 border-gray-300 rounded"
                               checked={selectAll}
                               onChange={handleSelectAllLeads}
                             />
@@ -901,7 +922,7 @@ export const LeadEnrichment: React.FC = () => {
                           onClick={() => handleSort('fitScore')}
                         >
                           <div className="flex items-center">
-                            <span>Security Fit</span>
+                            <span>Fit Score</span>
                             {sortField === 'fitScore' && (
                               <span className="ml-1">
                                 {sortDirection === 'asc' ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
@@ -920,7 +941,7 @@ export const LeadEnrichment: React.FC = () => {
                           <td className="px-3 py-4 whitespace-nowrap">
                             <input
                               type="checkbox"
-                              className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+                              className="h-4 w-4 text-cleeng-blue-600 focus:ring-cleeng-blue-500 border-gray-300 rounded"
                               checked={selectedLeads.includes(lead.id)}
                               onChange={() => handleSelectLead(lead.id)}
                             />
@@ -931,7 +952,7 @@ export const LeadEnrichment: React.FC = () => {
                                 <div className="text-sm font-medium text-gray-900">{lead.name}</div>
                                 <div className="text-sm text-gray-500 flex items-center">
                                   <Mail size={12} className="mr-1" />
-                                  <a href={`mailto:${lead.email}`} className="hover:text-blue-600">{lead.email}</a>
+                                  <a href={`mailto:${lead.email}`} className="hover:text-cleeng-blue-600">{lead.email}</a>
                                 </div>
                               </div>
                             </div>
@@ -955,7 +976,7 @@ export const LeadEnrichment: React.FC = () => {
                                 <Star size={12} className="text-gray-300" />
                               )}
                               <span className="text-xs text-gray-500 ml-1">
-                                {lead.fitScore >= 8.5 ? 'High security fit' : lead.fitScore >= 7 ? 'Medium fit' : 'Low fit'}
+                                {lead.fitScore >= 8.5 ? 'High fit' : lead.fitScore >= 7 ? 'Medium fit' : 'Low fit'}
                               </span>
                             </div>
                           </td>
@@ -1020,10 +1041,10 @@ export const LeadEnrichment: React.FC = () => {
                     <div className="text-sm text-blue-700">
                       <p>
                         {leads.filter(l => l.reason).length} contacts have been enriched with additional data.
-                        The average security fit score is {(leads.reduce((sum, lead) => sum + lead.fitScore, 0) / leads.length).toFixed(1)}.
+                        The average fit score is {(leads.reduce((sum, lead) => sum + lead.fitScore, 0) / leads.length).toFixed(1)}.
                       </p>
                       <p className="mt-2">
-                        Recommended next action: Focus on high-fit contacts (8.5+) in the enterprise technology sector with Kubernetes deployments.
+                        Recommended next action: Focus on high-fit contacts (8.5+) in the enterprise technology sector with active outbound campaigns.
                       </p>
                     </div>
                   </div>
@@ -1057,12 +1078,12 @@ export const LeadEnrichment: React.FC = () => {
       )}
       
       <ChatModal 
-        agentName="KnoxEngage Enrichment Assistant"
+        agentName="Cleengage Enrichment Assistant"
         initialMessages={[
           {
             id: '1',
             role: 'assistant',
-            content: 'I can help you enrich your contacts with security and company data. Would you like me to explain how our enrichment providers work or help you find the right contacts for your cybersecurity outreach?',
+            content: 'I can help you enrich your contacts with Apollo.io data and AI-powered insights. Would you like me to explain how our enrichment providers work or help you find the right contacts for your outreach?',
             timestamp: new Date(),
           },
         ]}

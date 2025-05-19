@@ -10,7 +10,7 @@ import {
   Target,
   Building,
   Globe,
-  Shield,
+  Users,
   Server,
   Database,
   RefreshCw,
@@ -20,12 +20,11 @@ import {
   ChevronDown,
   ChevronUp,
   ExternalLink,
-  Users,
   Cpu,
-  Lock,
-  FileText,
   TrendingUp,
   Crosshair,
+  Briefcase,
+  BarChart
 } from 'lucide-react';
 
 // Import security intelligence data
@@ -161,7 +160,7 @@ export const SalesIntelligence: React.FC = () => {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-6">
             <Card>
               <h4 className="font-medium text-gray-900 mb-3 flex items-center">
-                <Users size={18} className="text-blue-600 mr-2" />
+                <Users size={18} className="text-cleeng-blue-600 mr-2" />
                 Contact Information
               </h4>
               
@@ -187,7 +186,7 @@ export const SalesIntelligence: React.FC = () => {
                   <span>{contact.companySize}</span>
                 </div>
                 <div className="flex items-start">
-                  <span className="text-gray-500 w-24 flex-shrink-0">Security Fit:</span>
+                  <span className="text-gray-500 w-24 flex-shrink-0">Fit Score:</span>
                   {getSecurityFitBadge(contact.fitScore)}
                 </div>
               </div>
@@ -195,13 +194,13 @@ export const SalesIntelligence: React.FC = () => {
 
             <Card className="lg:col-span-2">
               <h4 className="font-medium text-gray-900 mb-3 flex items-center">
-                <Shield size={18} className="text-blue-600 mr-2" />
-                Security Context
+                <Target size={18} className="text-cleeng-blue-600 mr-2" />
+                Business Context
               </h4>
               
               <div className="space-y-4">
                 <div>
-                  <h5 className="text-sm font-medium text-gray-700 mb-2">Security Stack</h5>
+                  <h5 className="text-sm font-medium text-gray-700 mb-2">Tech Stack</h5>
                   <div className="flex flex-wrap gap-2">
                     {contact.securityStack.map((tech, idx) => (
                       <Badge key={idx}>{tech}</Badge>
@@ -219,7 +218,7 @@ export const SalesIntelligence: React.FC = () => {
                 </div>
                 
                 <div>
-                  <h5 className="text-sm font-medium text-gray-700 mb-2">Security Challenges</h5>
+                  <h5 className="text-sm font-medium text-gray-700 mb-2">Key Challenges</h5>
                   <ul className="space-y-1 text-sm text-gray-600">
                     {contact.securityChallenges.map((challenge, idx) => (
                       <li key={idx} className="flex items-start">
@@ -236,7 +235,7 @@ export const SalesIntelligence: React.FC = () => {
                     <ul className="space-y-1 text-sm text-gray-600">
                       {contact.recentActivity.map((activity, idx) => (
                         <li key={idx} className="flex items-start">
-                          <Clock size={14} className="text-blue-500 mt-0.5 mr-1 flex-shrink-0" />
+                          <Clock size={14} className="text-cleeng-blue-500 mt-0.5 mr-1 flex-shrink-0" />
                           <span>{activity}</span>
                         </li>
                       ))}
@@ -257,22 +256,22 @@ export const SalesIntelligence: React.FC = () => {
                 <ul className="space-y-3 text-sm text-blue-700">
                   <li className="flex items-start">
                     <CheckCircle size={16} className="text-blue-600 mr-2 mt-0.5 flex-shrink-0" />
-                    <span>Mention {contact.company}'s recent {contact.securityChallenges[0].toLowerCase()} challenges, which our platform specifically addresses through our runtime protection features.</span>
+                    <span>Mention {contact.company}'s recent focus on {contact.securityChallenges[0].toLowerCase()}, which our platform specifically addresses.</span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle size={16} className="text-blue-600 mr-2 mt-0.5 flex-shrink-0" />
-                    <span>Reference their use of {contact.securityStack[0]} and how our solution complements it with additional container-specific protection.</span>
+                    <span>Reference their use of {contact.securityStack[0]} and how our solution complements it with additional features.</span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle size={16} className="text-blue-600 mr-2 mt-0.5 flex-shrink-0" />
-                    <span>Highlight our success with similar {contact.industry} companies that use {contact.cloudEnvironment[0]} for their container deployments.</span>
+                    <span>Highlight our success with similar {contact.industry} companies that face similar challenges.</span>
                   </li>
                 </ul>
               </div>
 
               <div>
                 <h5 className="font-medium text-gray-900 mb-2 flex items-center">
-                  <Target size={16} className="text-blue-600 mr-2" />
+                  <Target size={16} className="text-cleeng-blue-600 mr-2" />
                   Optimal Engagement Strategy
                 </h5>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -286,11 +285,11 @@ export const SalesIntelligence: React.FC = () => {
                   </div>
                   <div className="p-4 border border-gray-200 rounded-md">
                     <div className="flex items-center mb-1">
-                      <FileText size={14} className="text-gray-500 mr-2" />
-                      <span className="font-medium text-gray-800">Recommended Content</span>
+                      <Target size={14} className="text-gray-500 mr-2" />
+                      <span className="font-medium text-gray-800">Recommended Approach</span>
                     </div>
-                    <p className="text-sm text-gray-600">Container Security Case Study, Kubernetes Security Whitepaper</p>
-                    <p className="text-xs text-gray-500 mt-1">Relevant for their {contact.cloudEnvironment.join(', ')} environment</p>
+                    <p className="text-sm text-gray-600">LinkedIn connection request followed by personalized email</p>
+                    <p className="text-xs text-gray-500 mt-1">Based on their recent social media activity</p>
                   </div>
                 </div>
               </div>
@@ -303,14 +302,14 @@ export const SalesIntelligence: React.FC = () => {
     return (
       <div>
         <div className="flex justify-between items-center mb-4">
-          <h3 className="text-lg font-medium text-gray-900">Contact Security Insights</h3>
+          <h3 className="text-lg font-medium text-gray-900">Contact Insights</h3>
           <div className="relative w-64">
             <input
               type="text"
               placeholder="Search contacts..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-9 pr-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="w-full pl-9 pr-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-cleeng-blue-500 focus:border-transparent"
             />
             <div className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400">
               <Search size={16} />
@@ -345,15 +344,18 @@ export const SalesIntelligence: React.FC = () => {
                   <span className="text-sm text-gray-700">{contact.industry}</span>
                 </div>
                 <div className="mb-3">
-                  <h4 className="text-xs font-medium text-gray-700 mb-1">Cloud Environment:</h4>
+                  <h4 className="text-xs font-medium text-gray-700 mb-1">Tech Stack:</h4>
                   <div className="flex flex-wrap gap-1">
-                    {contact.cloudEnvironment.map((env, idx) => (
-                      <Badge key={idx} variant="info" className="text-xs">{env}</Badge>
+                    {contact.securityStack.slice(0, 3).map((tech, idx) => (
+                      <Badge key={idx} variant="info" className="text-xs">{tech}</Badge>
                     ))}
+                    {contact.securityStack.length > 3 && (
+                      <Badge variant="info" className="text-xs">+{contact.securityStack.length - 3}</Badge>
+                    )}
                   </div>
                 </div>
                 <div>
-                  <h4 className="text-xs font-medium text-gray-700 mb-1">Security Challenges:</h4>
+                  <h4 className="text-xs font-medium text-gray-700 mb-1">Key Challenges:</h4>
                   <ul className="text-xs text-gray-600 space-y-1">
                     {contact.securityChallenges.slice(0, 2).map((challenge, idx) => (
                       <li key={idx} className="flex items-start">
@@ -362,7 +364,7 @@ export const SalesIntelligence: React.FC = () => {
                       </li>
                     ))}
                     {contact.securityChallenges.length > 2 && (
-                      <li className="text-blue-600 text-xs">+{contact.securityChallenges.length - 2} more challenges</li>
+                      <li className="text-cleeng-blue-600 text-xs">+{contact.securityChallenges.length - 2} more challenges</li>
                     )}
                   </ul>
                 </div>
@@ -371,12 +373,12 @@ export const SalesIntelligence: React.FC = () => {
           </div>
         )}
 
-        <Card title="Industry Security Trends">
+        <Card title="Industry Insights">
           <div className="space-y-4">
             <div className="bg-blue-50 p-4 rounded-md">
               <h4 className="font-medium text-blue-800 mb-2 flex items-center">
                 <TrendingUp size={16} className="mr-2" />
-                Top Security Trends
+                Top Industry Trends
               </h4>
               <div className="space-y-2">
                 {securityIntelligenceData.securityTrends && securityIntelligenceData.securityTrends.map((trend, idx) => (
@@ -392,7 +394,7 @@ export const SalesIntelligence: React.FC = () => {
             </div>
 
             <div>
-              <h4 className="font-medium text-gray-900 mb-2">Top Security Challenges by Industry</h4>
+              <h4 className="font-medium text-gray-900 mb-2">Top Challenges by Industry</h4>
               <div className="overflow-x-auto">
                 <table className="min-w-full divide-y divide-gray-200">
                   <thead className="bg-gray-50">
@@ -405,10 +407,10 @@ export const SalesIntelligence: React.FC = () => {
                   </thead>
                   <tbody className="bg-white divide-y divide-gray-200">
                     {[
-                      { industry: "Financial Services", challenge: "Container Runtime Protection", priority: "High", fit: "Excellent" },
-                      { industry: "Healthcare", challenge: "Compliance Automation", priority: "Critical", fit: "Strong" },
-                      { industry: "Retail", challenge: "Kubernetes Misconfigurations", priority: "Medium", fit: "Good" },
-                      { industry: "Technology", challenge: "Zero-Day Vulnerabilities", priority: "High", fit: "Excellent" }
+                      { industry: "Financial Services", challenge: "Data Integration", priority: "High", fit: "Excellent" },
+                      { industry: "Healthcare", challenge: "Sales Automation", priority: "Critical", fit: "Strong" },
+                      { industry: "Retail", challenge: "CRM Synchronization", priority: "Medium", fit: "Good" },
+                      { industry: "Technology", challenge: "Lead Enrichment", priority: "High", fit: "Excellent" }
                     ].map((item, idx) => (
                       <tr key={idx} className="hover:bg-gray-50">
                         <td className="px-3 py-2 whitespace-nowrap text-sm text-gray-900">{item.industry}</td>
@@ -493,7 +495,7 @@ export const SalesIntelligence: React.FC = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
             <Card>
               <h4 className="font-medium text-gray-900 mb-4 flex items-center">
-                <Building size={18} className="text-blue-600 mr-2" />
+                <Building size={18} className="text-cleeng-blue-600 mr-2" />
                 Company Profile
               </h4>
               
@@ -504,12 +506,12 @@ export const SalesIntelligence: React.FC = () => {
                 </div>
                 
                 <div>
-                  <h5 className="text-sm font-medium text-gray-700 mb-2">Security Posture</h5>
+                  <h5 className="text-sm font-medium text-gray-700 mb-2">Tech Maturity</h5>
                   <p className="text-gray-900">{company.securityPosture}</p>
                 </div>
                 
                 <div>
-                  <h5 className="text-sm font-medium text-gray-700 mb-2">Cloud Architecture</h5>
+                  <h5 className="text-sm font-medium text-gray-700 mb-2">Tech Stack</h5>
                   <div className="flex flex-wrap gap-2">
                     {company.cloudArchitecture.map((item, index) => (
                       <Badge key={index}>{item}</Badge>
@@ -530,13 +532,13 @@ export const SalesIntelligence: React.FC = () => {
 
             <Card>
               <h4 className="font-medium text-gray-900 mb-4 flex items-center">
-                <Shield size={18} className="text-blue-600 mr-2" />
-                Security Context
+                <Target size={18} className="text-cleeng-blue-600 mr-2" />
+                Business Context
               </h4>
               
               <div className="space-y-4">
                 <div>
-                  <h5 className="text-sm font-medium text-gray-700 mb-2">Security Technology Stack</h5>
+                  <h5 className="text-sm font-medium text-gray-700 mb-2">Current Technology Stack</h5>
                   <div className="flex flex-wrap gap-2">
                     {company.securityStack.map((tech, index) => (
                       <Badge key={index}>{tech}</Badge>
@@ -545,7 +547,7 @@ export const SalesIntelligence: React.FC = () => {
                 </div>
                 
                 <div>
-                  <h5 className="text-sm font-medium text-gray-700 mb-2">Identified Vulnerabilities</h5>
+                  <h5 className="text-sm font-medium text-gray-700 mb-2">Key Business Challenges</h5>
                   <ul className="space-y-1 text-sm text-gray-600">
                     {company.vulnerabilities.map((item, index) => (
                       <li key={index} className="flex items-start">
@@ -557,11 +559,11 @@ export const SalesIntelligence: React.FC = () => {
                 </div>
                 
                 <div>
-                  <h5 className="text-sm font-medium text-gray-700 mb-2">Recent Security Events</h5>
+                  <h5 className="text-sm font-medium text-gray-700 mb-2">Recent Business Events</h5>
                   <ul className="space-y-1 text-sm text-gray-600">
                     {company.recentSecurityEvents.map((event, index) => (
                       <li key={index} className="flex items-start">
-                        <Clock size={14} className="text-blue-500 mt-0.5 mr-1 flex-shrink-0" />
+                        <Clock size={14} className="text-cleeng-blue-500 mt-0.5 mr-1 flex-shrink-0" />
                         <span>{event}</span>
                       </li>
                     ))}
@@ -574,28 +576,28 @@ export const SalesIntelligence: React.FC = () => {
           <Card title="Solution Fit Analysis">
             <div className="space-y-4">
               <div>
-                <h4 className="font-medium text-gray-900 mb-2">Key Security Challenges</h4>
+                <h4 className="font-medium text-gray-900 mb-2">Key Business Challenges</h4>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                   <div className="p-3 border border-yellow-200 bg-yellow-50 rounded-md">
                     <div className="flex items-center mb-1">
                       <AlertTriangle size={16} className="text-yellow-500 mr-2" />
-                      <h5 className="font-medium text-yellow-800">Container Security</h5>
+                      <h5 className="font-medium text-yellow-800">Outreach Efficiency</h5>
                     </div>
-                    <p className="text-sm text-yellow-700">Vulnerable container images and lack of runtime protection</p>
+                    <p className="text-sm text-yellow-700">Manual outreach processes and lack of personalization</p>
                   </div>
                   <div className="p-3 border border-yellow-200 bg-yellow-50 rounded-md">
                     <div className="flex items-center mb-1">
                       <AlertTriangle size={16} className="text-yellow-500 mr-2" />
-                      <h5 className="font-medium text-yellow-800">Kubernetes Misconfigurations</h5>
+                      <h5 className="font-medium text-yellow-800">CRM Integration</h5>
                     </div>
-                    <p className="text-sm text-yellow-700">Overly permissive RBAC and inadequate network policies</p>
+                    <p className="text-sm text-yellow-700">Disconnected systems and double data entry</p>
                   </div>
                   <div className="p-3 border border-yellow-200 bg-yellow-50 rounded-md">
                     <div className="flex items-center mb-1">
                       <AlertTriangle size={16} className="text-yellow-500 mr-2" />
-                      <h5 className="font-medium text-yellow-800">Compliance Reporting</h5>
+                      <h5 className="font-medium text-yellow-800">Lead Quality</h5>
                     </div>
-                    <p className="text-sm text-yellow-700">Manual compliance checks causing delays and human errors</p>
+                    <p className="text-sm text-yellow-700">Insufficient data on prospects and poor targeting</p>
                   </div>
                 </div>
               </div>
@@ -606,23 +608,23 @@ export const SalesIntelligence: React.FC = () => {
                   <div className="p-3 border border-green-200 bg-green-50 rounded-md">
                     <div className="flex items-center mb-1">
                       <CheckCircle size={16} className="text-green-500 mr-2" />
-                      <h5 className="font-medium text-green-800">Runtime Protection</h5>
+                      <h5 className="font-medium text-green-800">AI Automation</h5>
                     </div>
-                    <p className="text-sm text-green-700">Real-time threat detection and prevention for running containers</p>
+                    <p className="text-sm text-green-700">Personalized outreach at scale with AI assistance</p>
                   </div>
                   <div className="p-3 border border-green-200 bg-green-50 rounded-md">
                     <div className="flex items-center mb-1">
                       <CheckCircle size={16} className="text-green-500 mr-2" />
-                      <h5 className="font-medium text-green-800">Compliance Automation</h5>
+                      <h5 className="font-medium text-green-800">Seamless Integration</h5>
                     </div>
-                    <p className="text-sm text-green-700">Automated {company.compliance.join(', ')} compliance controls and reporting</p>
+                    <p className="text-sm text-green-700">Two-way sync with {company.compliance.join(', ')} systems</p>
                   </div>
                   <div className="p-3 border border-green-200 bg-green-50 rounded-md">
                     <div className="flex items-center mb-1">
                       <CheckCircle size={16} className="text-green-500 mr-2" />
-                      <h5 className="font-medium text-green-800">Vulnerability Management</h5>
+                      <h5 className="font-medium text-green-800">Enriched Data</h5>
                     </div>
-                    <p className="text-sm text-green-700">Continuous scanning and mitigation of container vulnerabilities</p>
+                    <p className="text-sm text-green-700">Comprehensive contact enrichment with Apollo.io</p>
                   </div>
                 </div>
               </div>
@@ -633,14 +635,14 @@ export const SalesIntelligence: React.FC = () => {
                   <div>
                     <h4 className="text-sm font-medium text-blue-800 mb-2">AI-Generated Engagement Strategy</h4>
                     <div className="text-sm text-blue-700">
-                      <p>Based on {company.name}'s security profile, focus on these key points in your engagement:</p>
+                      <p>Based on {company.name}'s profile, focus on these key points in your engagement:</p>
                       <ul className="mt-2 space-y-1 list-disc pl-5">
-                        <li>Emphasize how our platform addresses their {company.vulnerabilities[0].toLowerCase()} vulnerability</li>
-                        <li>Demonstrate our automated compliance features for {company.compliance[0]}</li>
-                        <li>Show integration capabilities with their existing {company.securityStack[0]} solution</li>
+                        <li>Emphasize how our platform addresses their {company.vulnerabilities[0].toLowerCase()} challenges</li>
+                        <li>Demonstrate our seamless integration with their existing {company.securityStack[0]} solution</li>
+                        <li>Highlight our AI-powered personalization capabilities</li>
                         <li>Share the case study from a similar company in the {company.industry} space</li>
                       </ul>
-                      <p className="mt-2 font-medium">Recommended contacts: CISOs, DevSecOps Engineers, Security Architects</p>
+                      <p className="mt-2 font-medium">Recommended contacts: CMOs, Sales Directors, Marketing Operations</p>
                     </div>
                   </div>
                 </div>
@@ -653,13 +655,13 @@ export const SalesIntelligence: React.FC = () => {
 
     return (
       <div>
-        <h3 className="text-lg font-medium text-gray-900 mb-4">Company Security Insights</h3>
+        <h3 className="text-lg font-medium text-gray-900 mb-4">Company Business Insights</h3>
         
         {companyInsights.length === 0 ? (
           <div className="text-center py-10 bg-gray-50 rounded-lg border border-dashed border-gray-300">
             <Building size={48} className="mx-auto text-gray-300 mb-3" />
             <h3 className="text-lg font-medium text-gray-900 mb-1">No companies found</h3>
-            <p className="text-gray-600">Add companies to get security insights</p>
+            <p className="text-gray-600">Add companies to get business insights</p>
           </div>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-6">
@@ -673,7 +675,7 @@ export const SalesIntelligence: React.FC = () => {
                 <p className="text-sm text-gray-600 mb-3">{company.industry}</p>
                 
                 <div className="mb-3">
-                  <h4 className="text-xs font-medium text-gray-700 mb-1">Cloud Architecture:</h4>
+                  <h4 className="text-xs font-medium text-gray-700 mb-1">Tech Stack:</h4>
                   <div className="flex flex-wrap gap-1">
                     {company.cloudArchitecture.map((item, idx) => (
                       <Badge key={idx} variant="info" className="text-xs">{item}</Badge>
@@ -682,12 +684,12 @@ export const SalesIntelligence: React.FC = () => {
                 </div>
                 
                 <div className="mb-3">
-                  <h4 className="text-xs font-medium text-gray-700 mb-1">Security Posture:</h4>
+                  <h4 className="text-xs font-medium text-gray-700 mb-1">Business Posture:</h4>
                   <p className="text-sm text-gray-700">{company.securityPosture}</p>
                 </div>
                 
                 <div>
-                  <h4 className="text-xs font-medium text-gray-700 mb-1">Key Vulnerabilities:</h4>
+                  <h4 className="text-xs font-medium text-gray-700 mb-1">Key Challenges:</h4>
                   <ul className="text-xs text-gray-600 space-y-1">
                     {company.vulnerabilities.slice(0, 2).map((item, idx) => (
                       <li key={idx} className="flex items-start">
@@ -696,7 +698,7 @@ export const SalesIntelligence: React.FC = () => {
                       </li>
                     ))}
                     {company.vulnerabilities.length > 2 && (
-                      <li className="text-blue-600 text-xs">+{company.vulnerabilities.length - 2} more</li>
+                      <li className="text-cleeng-blue-600 text-xs">+{company.vulnerabilities.length - 2} more</li>
                     )}
                   </ul>
                 </div>
@@ -705,14 +707,14 @@ export const SalesIntelligence: React.FC = () => {
           </div>
         )}
         
-        <Card title="Industry Compliance Requirements">
+        <Card title="CRM Integration Insights">
           <div className="overflow-x-auto">
             <table className="min-w-full divide-y divide-gray-200">
               <thead className="bg-gray-50">
                 <tr>
                   <th scope="col" className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Industry</th>
-                  <th scope="col" className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Compliance Requirements</th>
-                  <th scope="col" className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">AccuKnox Capabilities</th>
+                  <th scope="col" className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Integration Needs</th>
+                  <th scope="col" className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Cleengage Capabilities</th>
                 </tr>
               </thead>
               <tbody className="bg-white divide-y divide-gray-200">
@@ -720,41 +722,20 @@ export const SalesIntelligence: React.FC = () => {
                   <td className="px-4 py-3 whitespace-nowrap text-sm font-medium text-gray-900">Financial Services</td>
                   <td className="px-4 py-3 whitespace-nowrap">
                     <div className="flex flex-wrap gap-1">
-                      <Badge>PCI DSS</Badge>
-                      <Badge>SOX</Badge>
-                      <Badge>GLBA</Badge>
+                      <Badge>Salesforce</Badge>
+                      <Badge>HubSpot</Badge>
+                      <Badge>LinkedIn Sales Nav</Badge>
                     </div>
                   </td>
                   <td className="px-4 py-3 whitespace-nowrap">
                     <ul className="text-sm text-gray-600 space-y-1">
                       <li className="flex items-start">
                         <CheckCircle size={14} className="text-green-500 mt-0.5 mr-1 flex-shrink-0" />
-                        <span>Runtime compliance monitoring</span>
+                        <span>Bi-directional CRM sync</span>
                       </li>
                       <li className="flex items-start">
                         <CheckCircle size={14} className="text-green-500 mt-0.5 mr-1 flex-shrink-0" />
-                        <span>Automated audit reports</span>
-                      </li>
-                    </ul>
-                  </td>
-                </tr>
-                <tr className="hover:bg-gray-50">
-                  <td className="px-4 py-3 whitespace-nowrap text-sm font-medium text-gray-900">Healthcare</td>
-                  <td className="px-4 py-3 whitespace-nowrap">
-                    <div className="flex flex-wrap gap-1">
-                      <Badge>HIPAA</Badge>
-                      <Badge>HITRUST</Badge>
-                    </div>
-                  </td>
-                  <td className="px-4 py-3 whitespace-nowrap">
-                    <ul className="text-sm text-gray-600 space-y-1">
-                      <li className="flex items-start">
-                        <CheckCircle size={14} className="text-green-500 mt-0.5 mr-1 flex-shrink-0" />
-                        <span>PHI data protection</span>
-                      </li>
-                      <li className="flex items-start">
-                        <CheckCircle size={14} className="text-green-500 mt-0.5 mr-1 flex-shrink-0" />
-                        <span>Access control verification</span>
+                        <span>Activity logging</span>
                       </li>
                     </ul>
                   </td>
@@ -763,20 +744,41 @@ export const SalesIntelligence: React.FC = () => {
                   <td className="px-4 py-3 whitespace-nowrap text-sm font-medium text-gray-900">Technology</td>
                   <td className="px-4 py-3 whitespace-nowrap">
                     <div className="flex flex-wrap gap-1">
-                      <Badge>SOC 2</Badge>
-                      <Badge>ISO 27001</Badge>
-                      <Badge>GDPR</Badge>
+                      <Badge>HubSpot</Badge>
+                      <Badge>Salesforce</Badge>
+                      <Badge>Apollo.io</Badge>
                     </div>
                   </td>
                   <td className="px-4 py-3 whitespace-nowrap">
                     <ul className="text-sm text-gray-600 space-y-1">
                       <li className="flex items-start">
                         <CheckCircle size={14} className="text-green-500 mt-0.5 mr-1 flex-shrink-0" />
-                        <span>Continuous compliance monitoring</span>
+                        <span>Full LinkedIn automation</span>
                       </li>
                       <li className="flex items-start">
                         <CheckCircle size={14} className="text-green-500 mt-0.5 mr-1 flex-shrink-0" />
-                        <span>Data sovereignty controls</span>
+                        <span>Advanced enrichment</span>
+                      </li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr className="hover:bg-gray-50">
+                  <td className="px-4 py-3 whitespace-nowrap text-sm font-medium text-gray-900">Healthcare</td>
+                  <td className="px-4 py-3 whitespace-nowrap">
+                    <div className="flex flex-wrap gap-1">
+                      <Badge>Salesforce</Badge>
+                      <Badge>Microsoft Dynamics</Badge>
+                    </div>
+                  </td>
+                  <td className="px-4 py-3 whitespace-nowrap">
+                    <ul className="text-sm text-gray-600 space-y-1">
+                      <li className="flex items-start">
+                        <CheckCircle size={14} className="text-green-500 mt-0.5 mr-1 flex-shrink-0" />
+                        <span>Compliant data handling</span>
+                      </li>
+                      <li className="flex items-start">
+                        <CheckCircle size={14} className="text-green-500 mt-0.5 mr-1 flex-shrink-0" />
+                        <span>Secure messaging</span>
                       </li>
                     </ul>
                   </td>
@@ -802,67 +804,67 @@ export const SalesIntelligence: React.FC = () => {
 
     return (
       <div className="space-y-6">
-        <Card title="Security Landscape">
+        <Card title="Sales Technology Landscape">
           <div className="mb-4 bg-blue-50 p-4 rounded-md">
             <div className="flex items-start">
               <Sparkles size={18} className="text-blue-600 mt-0.5 mr-2 flex-shrink-0" />
               <div>
                 <h4 className="text-sm font-medium text-blue-800 mb-2">Market Intelligence Summary</h4>
                 <p className="text-sm text-blue-700">
-                  The cloud-native security market is experiencing significant growth as organizations rapidly adopt container technologies. Key drivers include the shift to microservices architectures, increasing regulatory requirements, and the rising number of container-specific vulnerabilities.
+                  The sales engagement market is experiencing significant growth with AI becoming a critical differentiator. Key drivers include the need for personalization at scale, integration with CRM systems, and multi-channel outreach capabilities.
                 </p>
                 <p className="text-sm text-blue-700 mt-2">
-                  With 87% of enterprises now running container workloads in production (up from 67% last year), there is an urgent need for specialized security solutions that can protect these dynamic environments throughout the entire application lifecycle.
+                  With 87% of enterprises now prioritizing AI-powered sales tools (up from 52% last year), there is an urgent need for solutions that combine automation with personalization while maintaining a human touch.
                 </p>
               </div>
             </div>
           </div>
 
-          <h4 className="text-base font-medium text-gray-900 mb-3">Top Container Security Challenges (2024)</h4>
+          <h4 className="text-base font-medium text-gray-900 mb-3">Top Sales Challenges (2024)</h4>
           <div className="relative pt-1 pb-6">
             <div className="overflow-hidden h-10">
               <div className="w-full h-10 bg-gray-200 absolute rounded-lg"></div>
-              <div className="h-10 bg-red-500 absolute rounded-l-lg" style={{ width: "65%" }}></div>
+              <div className="h-10 bg-red-500 absolute rounded-l-lg" style={{ width: "78%" }}></div>
               <div className="relative z-10 flex items-center h-10">
-                <span className="text-white text-xs font-medium pl-3">68% - Runtime Security</span>
+                <span className="text-white text-xs font-medium pl-3">78% - Personalization at Scale</span>
               </div>
             </div>
             
             <div className="mt-3 overflow-hidden h-10">
               <div className="w-full h-10 bg-gray-200 absolute rounded-lg"></div>
-              <div className="h-10 bg-red-400 absolute rounded-l-lg" style={{ width: "58%" }}></div>
+              <div className="h-10 bg-red-400 absolute rounded-l-lg" style={{ width: "65%" }}></div>
               <div className="relative z-10 flex items-center h-10">
-                <span className="text-white text-xs font-medium pl-3">62% - Kubernetes Vulnerabilities</span>
+                <span className="text-white text-xs font-medium pl-3">65% - CRM Integration & Data Quality</span>
               </div>
             </div>
             
             <div className="mt-3 overflow-hidden h-10">
               <div className="w-full h-10 bg-gray-200 absolute rounded-lg"></div>
-              <div className="h-10 bg-red-300 absolute rounded-l-lg" style={{ width: "54%" }}></div>
+              <div className="h-10 bg-red-300 absolute rounded-l-lg" style={{ width: "61%" }}></div>
               <div className="relative z-10 flex items-center h-10">
-                <span className="text-white text-xs font-medium pl-3">57% - Supply Chain Attacks</span>
+                <span className="text-white text-xs font-medium pl-3">61% - Multi-channel Coordination</span>
               </div>
             </div>
             
             <div className="mt-3 overflow-hidden h-10">
               <div className="w-full h-10 bg-gray-200 absolute rounded-lg"></div>
-              <div className="h-10 bg-orange-400 absolute rounded-l-lg" style={{ width: "48%" }}></div>
+              <div className="h-10 bg-orange-400 absolute rounded-l-lg" style={{ width: "55%" }}></div>
               <div className="relative z-10 flex items-center h-10">
-                <span className="text-white text-xs font-medium pl-3">51% - Compliance Management</span>
+                <span className="text-white text-xs font-medium pl-3">55% - Measuring Outreach Effectiveness</span>
               </div>
             </div>
             
             <div className="mt-3 overflow-hidden h-10">
               <div className="w-full h-10 bg-gray-200 absolute rounded-lg"></div>
-              <div className="h-10 bg-yellow-400 absolute rounded-l-lg" style={{ width: "43%" }}></div>
+              <div className="h-10 bg-yellow-400 absolute rounded-l-lg" style={{ width: "48%" }}></div>
               <div className="relative z-10 flex items-center h-10">
-                <span className="text-gray-800 text-xs font-medium pl-3">46% - Secrets Management</span>
+                <span className="text-gray-800 text-xs font-medium pl-3">48% - Balancing Automation & Human Touch</span>
               </div>
             </div>
           </div>
 
           <div className="text-xs text-gray-500 text-right">
-            Source: Cloud Native Security Survey 2024, n=850 security professionals
+            Source: Sales Engagement Trends Report 2024, n=1,200 sales professionals
           </div>
         </Card>
 
@@ -871,11 +873,30 @@ export const SalesIntelligence: React.FC = () => {
             <div>
               <h4 className="font-medium text-gray-900 mb-3">Market Leaders</h4>
               <div className="space-y-3">
-                {securityIntelligenceData.competitiveLandscape && securityIntelligenceData.competitiveLandscape.map((competitor, idx) => (
+                {[
+                  { 
+                    name: "OutreachPro", 
+                    marketShare: "26%", 
+                    strengths: ["Enterprise presence", "Sequence automation"], 
+                    weaknesses: ["Limited personalization", "Lacks AI capabilities"] 
+                  },
+                  { 
+                    name: "SalesLoft", 
+                    marketShare: "22%", 
+                    strengths: ["Email deliverability", "LinkedIn integration"], 
+                    weaknesses: ["Complex pricing", "Basic analytics"] 
+                  },
+                  { 
+                    name: "Apollo", 
+                    marketShare: "18%", 
+                    strengths: ["Contact database", "Affordability"], 
+                    weaknesses: ["Limited AI capabilities", "CRM sync issues"] 
+                  }
+                ].map((competitor, idx) => (
                   <div key={idx} className="p-3 border border-gray-200 rounded-md">
                     <div className="flex justify-between items-start">
                       <h5 className="font-medium text-gray-900">{competitor.name}</h5>
-                      <Badge>{competitor.marketShare}% Share</Badge>
+                      <Badge>{competitor.marketShare} Share</Badge>
                     </div>
                     <div className="mt-2 space-y-2">
                       <div>
@@ -917,21 +938,21 @@ export const SalesIntelligence: React.FC = () => {
                 <div className="p-2 border border-green-200 bg-green-50 rounded-md flex items-start">
                   <CheckCircle size={16} className="text-green-600 mr-2 mt-0.5 flex-shrink-0" />
                   <div>
-                    <p className="text-sm font-medium text-green-800">Runtime protection without performance impact</p>
+                    <p className="text-sm font-medium text-green-800">Seamless CRM integration</p>
                     <p className="text-xs text-green-700">83% of wins cited this as a key factor</p>
                   </div>
                 </div>
                 <div className="p-2 border border-green-200 bg-green-50 rounded-md flex items-start">
                   <CheckCircle size={16} className="text-green-600 mr-2 mt-0.5 flex-shrink-0" />
                   <div>
-                    <p className="text-sm font-medium text-green-800">Simplified compliance automation</p>
+                    <p className="text-sm font-medium text-green-800">AI-generated personalization</p>
                     <p className="text-xs text-green-700">71% of wins cited this as a key factor</p>
                   </div>
                 </div>
                 <div className="p-2 border border-green-200 bg-green-50 rounded-md flex items-start">
                   <CheckCircle size={16} className="text-green-600 mr-2 mt-0.5 flex-shrink-0" />
                   <div>
-                    <p className="text-sm font-medium text-green-800">Kubernetes-native approach</p>
+                    <p className="text-sm font-medium text-green-800">Multi-channel outreach</p>
                     <p className="text-xs text-green-700">65% of wins cited this as a key factor</p>
                   </div>
                 </div>
@@ -955,18 +976,18 @@ export const SalesIntelligence: React.FC = () => {
               <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="border border-gray-200 rounded-md p-3 hover:bg-gray-50">
                   <h5 className="font-medium text-gray-900 flex items-center">
-                    <FileText size={16} className="mr-2 text-blue-600" />
-                    Gartner Market Guide: Container Security
+                    <FileText size={16} className="mr-2 text-cleeng-blue-600" />
+                    Gartner Market Guide: Sales Engagement Tools
                   </h5>
-                  <p className="text-sm text-gray-600 mt-1">Comprehensive analysis of the container security market landscape.</p>
+                  <p className="text-sm text-gray-600 mt-1">Comprehensive analysis of the sales engagement market landscape.</p>
                   <p className="text-xs text-gray-500 mt-1">Updated: Dec 2023</p>
                 </div>
                 <div className="border border-gray-200 rounded-md p-3 hover:bg-gray-50">
                   <h5 className="font-medium text-gray-900 flex items-center">
-                    <FileText size={16} className="mr-2 text-blue-600" />
-                    Forrester Wave: Cloud Workload Security
+                    <FileText size={16} className="mr-2 text-cleeng-blue-600" />
+                    Forrester Wave: Sales Automation Platforms
                   </h5>
-                  <p className="text-sm text-gray-600 mt-1">Evaluation of top cloud workload security providers.</p>
+                  <p className="text-sm text-gray-600 mt-1">Evaluation of top sales automation providers.</p>
                   <p className="text-xs text-gray-500 mt-1">Updated: Nov 2023</p>
                 </div>
               </div>
@@ -977,11 +998,15 @@ export const SalesIntelligence: React.FC = () => {
     );
   };
 
+  function FileText(props: any) {
+    return <TrendingUp size={props.size || 16} className={props.className || ''} />;
+  }
+
   return (
     <div>
       <div className="mb-6">
-        <h2 className="text-2xl font-bold text-gray-900">Security Intelligence</h2>
-        <p className="text-gray-600">Personalized cybersecurity insights to boost sales effectiveness</p>
+        <h2 className="text-2xl font-bold text-gray-900">Sales Intelligence</h2>
+        <p className="text-gray-600">Personalized insights to boost sales effectiveness</p>
       </div>
 
       <div className="mb-6 border-b border-gray-200">
@@ -990,7 +1015,7 @@ export const SalesIntelligence: React.FC = () => {
             onClick={() => setSelectedTab('insights')}
             className={`py-4 px-6 border-b-2 font-medium text-sm whitespace-nowrap ${
               selectedTab === 'insights'
-                ? 'border-blue-600 text-blue-600'
+                ? 'border-cleeng-blue-600 text-cleeng-blue-600'
                 : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
             }`}
           >
@@ -1000,7 +1025,7 @@ export const SalesIntelligence: React.FC = () => {
             onClick={() => setSelectedTab('companies')}
             className={`py-4 px-6 border-b-2 font-medium text-sm whitespace-nowrap ${
               selectedTab === 'companies'
-                ? 'border-blue-600 text-blue-600'
+                ? 'border-cleeng-blue-600 text-cleeng-blue-600'
                 : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
             }`}
           >
@@ -1010,7 +1035,7 @@ export const SalesIntelligence: React.FC = () => {
             onClick={() => setSelectedTab('trends')}
             className={`py-4 px-6 border-b-2 font-medium text-sm whitespace-nowrap ${
               selectedTab === 'trends'
-                ? 'border-blue-600 text-blue-600'
+                ? 'border-cleeng-blue-600 text-cleeng-blue-600'
                 : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
             }`}
           >
@@ -1024,12 +1049,12 @@ export const SalesIntelligence: React.FC = () => {
       {selectedTab === 'trends' && renderTrends()}
       
       <ChatModal 
-        agentName="KnoxEngage Intelligence Assistant"
+        agentName="Cleengage Intelligence Assistant"
         initialMessages={[
           {
             id: '1',
             role: 'assistant',
-            content: 'I can help you analyze security trends, understand company security postures, and develop targeted engagement strategies for your contacts. What specific information are you looking for today?',
+            content: 'I can help you analyze sales trends, understand company business needs, and develop targeted engagement strategies for your contacts. What specific information are you looking for today?',
             timestamp: new Date(),
           },
         ]}

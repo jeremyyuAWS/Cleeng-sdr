@@ -26,7 +26,10 @@ import {
   Save,
   FileText,
   X,
-  User
+  User,
+  Linkedin,
+  BarChart2,
+  RefreshCw
 } from 'lucide-react';
 
 interface SequenceStep {
@@ -75,6 +78,8 @@ export const SequenceScheduler: React.FC = () => {
   const [isCreateMode, setIsCreateMode] = useState<boolean>(false);
   const [lastAddedStepIndex, setLastAddedStepIndex] = useState<number>(-1);
   const [isSmartSendTimeEnabled, setIsSmartSendTimeEnabled] = useState<boolean>(true);
+  const [showCRMIntegration, setShowCRMIntegration] = useState<boolean>(false);
+  const [selectedCRM, setSelectedCRM] = useState<string>('both');
 
   // Load initial data
   useEffect(() => {
@@ -163,8 +168,8 @@ export const SequenceScheduler: React.FC = () => {
             },
             {
               id: 'step-2-4',
-              type: 'phone',
-              name: 'Phone Call',
+              type: 'linkedin',
+              name: 'LinkedIn Message',
               delayDays: 2,
               usesSmartSendTime: false
             },
@@ -404,11 +409,11 @@ export const SequenceScheduler: React.FC = () => {
   const getStepIcon = (type: string) => {
     switch(type) {
       case 'email': 
-        return <Mail size={16} className="text-blue-600" />;
+        return <Mail size={16} className="text-cleeng-blue-600" />;
       case 'task':
-        return <CheckSquare size={16} className="text-green-600" />;
+        return <CheckSquare size={16} className="text-cleeng-green-600" />;
       case 'linkedin':
-        return <MessageSquare size={16} className="text-purple-600" />;
+        return <Linkedin size={16} className="text-purple-600" />;
       case 'phone':
         return <Phone size={16} className="text-yellow-600" />;
       default:
@@ -542,7 +547,7 @@ export const SequenceScheduler: React.FC = () => {
                                 <Clock size={14} className="mr-1" />
                                 <span>Day 1</span>
                                 {selectedDate && selectedTimeSlot ? (
-                                  <div className="flex items-center ml-4 text-blue-600">
+                                  <div className="flex items-center ml-4 text-cleeng-blue-600">
                                     <CalendarIcon size={14} className="mr-1" />
                                     <span>
                                       {selectedDate.toLocaleDateString('en-US', { 
@@ -621,6 +626,18 @@ export const SequenceScheduler: React.FC = () => {
                           <p className="text-sm text-gray-600">{step.taskDescription}</p>
                         </div>
                       )}
+
+                      {step.type === 'linkedin' && (
+                        <div className="mb-3">
+                          <div className="flex items-center text-sm text-gray-700 mb-1">
+                            <Linkedin size={14} className="mr-1 text-gray-500" />
+                            <span className="font-medium">LinkedIn Action:</span>
+                          </div>
+                          <p className="text-sm text-gray-600">
+                            Send personalized LinkedIn connection or message based on recipient profile
+                          </p>
+                        </div>
+                      )}
                       
                       {step.type === 'email' && (
                         <div className="flex items-center mt-3 pt-3 border-t border-gray-100">
@@ -630,10 +647,10 @@ export const SequenceScheduler: React.FC = () => {
                               id={`smart-send-${step.id}`}
                               checked={step.usesSmartSendTime}
                               onChange={() => handleToggleSmartSendTime(step.id)}
-                              className="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
+                              className="w-4 h-4 text-cleeng-blue-600 border-gray-300 rounded focus:ring-cleeng-blue-500"
                             />
                             <label htmlFor={`smart-send-${step.id}`} className="ml-2 text-xs text-gray-700 flex items-center">
-                              <Zap size={12} className="text-blue-500 mr-1" />
+                              <Zap size={12} className="text-cleeng-blue-500 mr-1" />
                               Smart Send-Time AI
                             </label>
                           </div>
@@ -674,29 +691,29 @@ export const SequenceScheduler: React.FC = () => {
                 <div className="grid grid-cols-3 gap-3">
                   <button
                     className={`px-3 py-2 rounded-md border flex flex-col items-center ${
-                      newStepType === 'email' ? 'bg-blue-50 border-blue-300 text-blue-700' : 'border-gray-300'
+                      newStepType === 'email' ? 'bg-blue-50 border-blue-300 text-cleeng-blue-700' : 'border-gray-300'
                     }`}
                     onClick={() => setNewStepType('email')}
                   >
-                    <Mail size={20} className={newStepType === 'email' ? 'text-blue-500' : 'text-gray-400'} />
+                    <Mail size={20} className={newStepType === 'email' ? 'text-cleeng-blue-500' : 'text-gray-400'} />
                     <span className="mt-1 text-sm">Email</span>
                   </button>
                   <button
                     className={`px-3 py-2 rounded-md border flex flex-col items-center ${
-                      newStepType === 'linkedin' ? 'bg-blue-50 border-blue-300 text-blue-700' : 'border-gray-300'
+                      newStepType === 'linkedin' ? 'bg-blue-50 border-blue-300 text-cleeng-blue-700' : 'border-gray-300'
                     }`}
                     onClick={() => setNewStepType('linkedin')}
                   >
-                    <MessageSquare size={20} className={newStepType === 'linkedin' ? 'text-blue-500' : 'text-gray-400'} />
+                    <Linkedin size={20} className={newStepType === 'linkedin' ? 'text-cleeng-blue-500' : 'text-gray-400'} />
                     <span className="mt-1 text-sm">LinkedIn</span>
                   </button>
                   <button
                     className={`px-3 py-2 rounded-md border flex flex-col items-center ${
-                      newStepType === 'task' ? 'bg-blue-50 border-blue-300 text-blue-700' : 'border-gray-300'
+                      newStepType === 'task' ? 'bg-blue-50 border-blue-300 text-cleeng-blue-700' : 'border-gray-300'
                     }`}
                     onClick={() => setNewStepType('task')}
                   >
-                    <CheckSquare size={20} className={newStepType === 'task' ? 'text-blue-500' : 'text-gray-400'} />
+                    <CheckSquare size={20} className={newStepType === 'task' ? 'text-cleeng-blue-500' : 'text-gray-400'} />
                     <span className="mt-1 text-sm">Manual Task</span>
                   </button>
                 </div>
@@ -710,7 +727,7 @@ export const SequenceScheduler: React.FC = () => {
                   <select
                     value={selectedTemplate}
                     onChange={(e) => setSelectedTemplate(e.target.value)}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-cleeng-blue-500 focus:border-transparent"
                   >
                     <option value="">Select a template</option>
                     {emailTemplates.map(template => (
@@ -738,10 +755,26 @@ export const SequenceScheduler: React.FC = () => {
                   <textarea
                     value={taskDescription}
                     onChange={(e) => setTaskDescription(e.target.value)}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-cleeng-blue-500 focus:border-transparent"
                     rows={3}
                     placeholder="Describe the manual task to be completed..."
                   ></textarea>
+                </div>
+              )}
+              
+              {newStepType === 'linkedin' && (
+                <div className="mb-4">
+                  <div className="bg-blue-50 p-3 rounded-md mb-3">
+                    <div className="flex items-start">
+                      <Linkedin size={16} className="text-blue-800 mt-0.5 mr-2 flex-shrink-0" />
+                      <div>
+                        <p className="text-sm font-medium text-blue-800">LinkedIn Automation</p>
+                        <p className="text-xs text-blue-700 mt-1">
+                          This step will send a personalized LinkedIn connection request or message using your configured templates from the LinkedIn Outreach tab.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               )}
               
@@ -752,12 +785,13 @@ export const SequenceScheduler: React.FC = () => {
                 <div className="flex items-center">
                   <span className="text-sm text-gray-600 mr-2">Send after</span>
                   <select
-                    className="w-20 px-2 py-1 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-20 px-2 py-1 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-cleeng-blue-500 focus:border-transparent"
+                    defaultValue="3"
                   >
                     <option value="0">0</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
-                    <option value="3" selected>3</option>
+                    <option value="3">3</option>
                     <option value="4">4</option>
                     <option value="5">5</option>
                     <option value="7">7</option>
@@ -773,10 +807,10 @@ export const SequenceScheduler: React.FC = () => {
                         id="smart-send-time"
                         checked={isSmartSendTimeEnabled}
                         onChange={() => setIsSmartSendTimeEnabled(!isSmartSendTimeEnabled)}
-                        className="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
+                        className="w-4 h-4 text-cleeng-blue-600 border-gray-300 rounded focus:ring-cleeng-blue-500"
                       />
                       <label htmlFor="smart-send-time" className="ml-2 text-xs text-gray-700 flex items-center">
-                        <Zap size={12} className="text-blue-500 mr-1" />
+                        <Zap size={12} className="text-cleeng-blue-500 mr-1" />
                         Smart Send-Time AI
                       </label>
                     </div>
@@ -807,12 +841,13 @@ export const SequenceScheduler: React.FC = () => {
                       Send Time
                     </label>
                     <select
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-cleeng-blue-500 focus:border-transparent"
+                      defaultValue="9:30 AM"
                     >
                       <option value="8:00 AM">8:00 AM</option>
                       <option value="8:30 AM">8:30 AM</option>
                       <option value="9:00 AM">9:00 AM</option>
-                      <option value="9:30 AM" selected>9:30 AM</option>
+                      <option value="9:30 AM">9:30 AM</option>
                       <option value="10:00 AM">10:00 AM</option>
                       <option value="10:30 AM">10:30 AM</option>
                       <option value="11:00 AM">11:00 AM</option>
@@ -855,7 +890,7 @@ export const SequenceScheduler: React.FC = () => {
             <div className="flex justify-between items-center mb-4">
               <h4 className="text-sm font-medium text-gray-700">First Outreach Scheduling</h4>
               {selectedDate && selectedTimeSlot ? (
-                <div className="flex items-center text-sm text-blue-600">
+                <div className="flex items-center text-sm text-cleeng-blue-600">
                   <CalendarIcon size={16} className="mr-2" />
                   Scheduled for: {selectedDate.toLocaleDateString('en-US', { 
                     weekday: 'short',
@@ -940,6 +975,12 @@ export const SequenceScheduler: React.FC = () => {
                       </span>
                     </div>
                     <div className="flex justify-between text-sm">
+                      <span className="text-gray-600">LinkedIn Steps:</span>
+                      <span className="font-medium text-gray-900">
+                        {sequence.steps.filter(s => s.type === 'linkedin').length}
+                      </span>
+                    </div>
+                    <div className="flex justify-between text-sm">
                       <span className="text-gray-600">Total Duration:</span>
                       <span className="font-medium text-gray-900">
                         {sequence.steps.reduce((total, step) => total + step.delayDays, 0)} days
@@ -973,9 +1014,170 @@ export const SequenceScheduler: React.FC = () => {
             )}
           </div>
         )}
+
+        <Card>
+          <div className="flex justify-between items-center mb-4">
+            <h4 className="font-medium text-gray-900">CRM Integration</h4>
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={() => setShowCRMIntegration(!showCRMIntegration)}
+              icon={showCRMIntegration ? <ChevronUp size={14} /> : <ChevronDown size={14} />}
+            >
+              {showCRMIntegration ? 'Hide Settings' : 'Configure'}
+            </Button>
+          </div>
+          
+          {showCRMIntegration ? (
+            <div className="space-y-4">
+              <div className="p-3 bg-blue-50 rounded-md text-sm text-blue-800">
+                <h5 className="font-medium mb-1">Bi-directional CRM Sync</h5>
+                <p className="text-xs">
+                  Sequence activities, contacts, and performance metrics will be synced with your connected CRM systems.
+                  When leads respond, their status will be updated automatically in both systems.
+                </p>
+              </div>
+              
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Sync With
+                </label>
+                <div className="grid grid-cols-3 gap-3">
+                  <button
+                    className={`p-3 border rounded-md flex items-center ${
+                      selectedCRM === 'hubspot' || selectedCRM === 'both'
+                        ? 'border-cleeng-blue-300 bg-blue-50'
+                        : 'border-gray-200 hover:bg-gray-50'
+                    }`}
+                    onClick={() => setSelectedCRM(selectedCRM === 'both' ? 'salesforce' : (selectedCRM === 'hubspot' ? 'none' : 'hubspot'))}
+                  >
+                    <div className="w-8 h-8 bg-white rounded-md p-1 mr-2 flex items-center justify-center">
+                      <img src="/images/hubspot_logo.png" alt="HubSpot" className="max-w-full max-h-full" />
+                    </div>
+                    <div className="text-sm font-medium">HubSpot</div>
+                    {(selectedCRM === 'hubspot' || selectedCRM === 'both') && (
+                      <CheckCircle size={16} className="ml-auto text-green-500" />
+                    )}
+                  </button>
+                  
+                  <button
+                    className={`p-3 border rounded-md flex items-center ${
+                      selectedCRM === 'salesforce' || selectedCRM === 'both'
+                        ? 'border-cleeng-blue-300 bg-blue-50'
+                        : 'border-gray-200 hover:bg-gray-50'
+                    }`}
+                    onClick={() => setSelectedCRM(selectedCRM === 'both' ? 'hubspot' : (selectedCRM === 'salesforce' ? 'none' : 'salesforce'))}
+                  >
+                    <div className="w-8 h-8 bg-white rounded-md p-1 mr-2 flex items-center justify-center">
+                      <img src="/images/Salesforcelogo2.png" alt="Salesforce" className="max-w-full max-h-full" />
+                    </div>
+                    <div className="text-sm font-medium">Salesforce</div>
+                    {(selectedCRM === 'salesforce' || selectedCRM === 'both') && (
+                      <CheckCircle size={16} className="ml-auto text-green-500" />
+                    )}
+                  </button>
+                  
+                  <button
+                    className={`p-3 border rounded-md flex items-center ${
+                      selectedCRM === 'both'
+                        ? 'border-cleeng-blue-300 bg-blue-50'
+                        : 'border-gray-200 hover:bg-gray-50'
+                    }`}
+                    onClick={() => setSelectedCRM('both')}
+                  >
+                    <div className="w-8 h-8 bg-blue-100 rounded-md p-1 mr-2 flex items-center justify-center">
+                      <BarChart2 size={16} className="text-cleeng-blue-600" />
+                    </div>
+                    <div className="text-sm font-medium">Both CRMs</div>
+                    {selectedCRM === 'both' && (
+                      <CheckCircle size={16} className="ml-auto text-green-500" />
+                    )}
+                  </button>
+                </div>
+              </div>
+              
+              <div>
+                <h4 className="text-sm font-medium text-gray-700 mb-2">Data Sync Settings</h4>
+                <div className="space-y-2">
+                  <label className="flex items-center">
+                    <input
+                      type="checkbox"
+                      className="w-4 h-4 text-cleeng-blue-600 border-gray-300 rounded focus:ring-cleeng-blue-500"
+                      defaultChecked
+                    />
+                    <span className="ml-2 text-sm text-gray-700">Sync sequence steps as activities/tasks</span>
+                  </label>
+                  
+                  <label className="flex items-center">
+                    <input
+                      type="checkbox"
+                      className="w-4 h-4 text-cleeng-blue-600 border-gray-300 rounded focus:ring-cleeng-blue-500"
+                      defaultChecked
+                    />
+                    <span className="ml-2 text-sm text-gray-700">Update lead status on sequence completion</span>
+                  </label>
+                  
+                  <label className="flex items-center">
+                    <input
+                      type="checkbox"
+                      className="w-4 h-4 text-cleeng-blue-600 border-gray-300 rounded focus:ring-cleeng-blue-500"
+                      defaultChecked
+                    />
+                    <span className="ml-2 text-sm text-gray-700">Log email opens, clicks, and replies</span>
+                  </label>
+                  
+                  <label className="flex items-center">
+                    <input
+                      type="checkbox"
+                      className="w-4 h-4 text-cleeng-blue-600 border-gray-300 rounded focus:ring-cleeng-blue-500"
+                      defaultChecked
+                    />
+                    <span className="ml-2 text-sm text-gray-700">Create tasks for manual follow-ups</span>
+                  </label>
+                </div>
+              </div>
+              
+              <Button 
+                variant="primary" 
+                fullWidth
+                className="mt-2"
+              >
+                Save CRM Settings
+              </Button>
+            </div>
+          ) : (
+            <div className="bg-blue-50 p-4 rounded-md">
+              <div className="flex items-start">
+                <RefreshCw size={18} className="text-blue-600 mt-0.5 mr-2" />
+                <div>
+                  <p className="text-sm font-medium text-blue-800">CRM Integration Status</p>
+                  <div className="mt-2 space-y-2">
+                    <div className="flex items-center">
+                      <img src="/images/hubspot_logo.png" alt="HubSpot" className="w-5 h-5 mr-2" />
+                      <span className="text-sm text-blue-700">HubSpot:</span>
+                      <span className="text-sm text-green-600 ml-2 flex items-center">
+                        <CheckCircle size={14} className="mr-1" /> Connected
+                      </span>
+                    </div>
+                    <div className="flex items-center">
+                      <img src="/images/Salesforcelogo2.png" alt="Salesforce" className="w-5 h-5 mr-2" />
+                      <span className="text-sm text-blue-700">Salesforce:</span>
+                      <span className="text-sm text-green-600 ml-2 flex items-center">
+                        <CheckCircle size={14} className="mr-1" /> Connected
+                      </span>
+                    </div>
+                  </div>
+                  <p className="text-xs text-blue-600 mt-2">
+                    All sequence activities will be synchronized with both CRM systems.
+                  </p>
+                </div>
+              </div>
+            </div>
+          )}
+        </Card>
         
         {sequence.steps.length > 0 && sequence.status === 'active' && (
-          <div className="bg-blue-50 rounded-lg p-4">
+          <div className="mt-6 bg-blue-50 rounded-lg p-4">
             <div className="flex items-start">
               <Sparkles size={18} className="text-blue-600 mt-0.5 mr-2" />
               <div>
@@ -1030,7 +1232,7 @@ export const SequenceScheduler: React.FC = () => {
                 type="text"
                 value={sequenceName}
                 onChange={(e) => setSequenceName(e.target.value)}
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-cleeng-blue-500 focus:border-transparent"
                 placeholder="e.g., B2B Outreach Sequence"
               />
             </div>
@@ -1043,7 +1245,7 @@ export const SequenceScheduler: React.FC = () => {
                 id="sequence-description"
                 value={sequenceDescription}
                 onChange={(e) => setSequenceDescription(e.target.value)}
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-cleeng-blue-500 focus:border-transparent"
                 rows={3}
                 placeholder="Briefly describe the purpose of this sequence"
               ></textarea>
@@ -1080,7 +1282,7 @@ export const SequenceScheduler: React.FC = () => {
     <div>
       <div className="mb-6">
         <h2 className="text-2xl font-bold text-gray-900">Sequence Scheduler</h2>
-        <p className="text-gray-600">Build email sequences with optimal timing</p>
+        <p className="text-gray-600">Build email and LinkedIn sequences with CRM integration</p>
       </div>
       
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
@@ -1166,19 +1368,19 @@ export const SequenceScheduler: React.FC = () => {
           <Card title="Resources">
             <div className="space-y-3">
               <div className="p-3 border border-gray-200 rounded-md hover:bg-gray-50">
-                <h4 className="font-medium text-gray-900 mb-1">Sequence Best Practices</h4>
+                <h4 className="text-sm font-medium text-gray-900 mb-1">Sequence Best Practices</h4>
                 <p className="text-xs text-gray-500 mb-2">Learn how to create high-converting sequences</p>
                 <Badge className="text-xs">4 min read</Badge>
               </div>
               
               <div className="p-3 border border-gray-200 rounded-md hover:bg-gray-50">
-                <h4 className="font-medium text-gray-900 mb-1">Timing Optimization</h4>
-                <p className="text-xs text-gray-500 mb-2">Discover optimal send times by industry</p>
+                <h4 className="text-sm font-medium text-gray-900 mb-1">Email + LinkedIn Integration</h4>
+                <p className="text-xs text-gray-500 mb-2">How to combine channels for 3x higher response rates</p>
                 <Badge className="text-xs">6 min read</Badge>
               </div>
               
               <div className="p-3 border border-gray-200 rounded-md hover:bg-gray-50">
-                <h4 className="font-medium text-gray-900 mb-1">Template Library</h4>
+                <h4 className="text-sm font-medium text-gray-900 mb-1">Template Library</h4>
                 <p className="text-xs text-gray-500 mb-2">Browse our pre-built sequence templates</p>
                 <Badge className="text-xs">12 templates</Badge>
               </div>
@@ -1197,12 +1399,12 @@ export const SequenceScheduler: React.FC = () => {
       {renderSequenceModal()}
       
       <ChatModal 
-        agentName="Jazon Sequence Assistant"
+        agentName="Cleengage Sequence Assistant"
         initialMessages={[
           {
             id: '1',
             role: 'assistant',
-            content: "I can help you build effective email sequences. What kind of sequence would you like to create today?",
+            content: "I can help you build effective email and LinkedIn sequences with CRM integration. What kind of sequence would you like to create today?",
             timestamp: new Date(),
           },
         ]}

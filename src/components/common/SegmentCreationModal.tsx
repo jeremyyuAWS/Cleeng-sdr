@@ -114,7 +114,7 @@ export const SegmentCreationModal: React.FC<SegmentCreationModalProps> = ({
               value={segmentName}
               onChange={(e) => setSegmentName(e.target.value)}
               placeholder="e.g., High-Value Marketing Leaders"
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-cleeng-blue-500 focus:border-transparent"
               required
             />
           </div>
@@ -128,7 +128,7 @@ export const SegmentCreationModal: React.FC<SegmentCreationModalProps> = ({
               value={segmentDescription}
               onChange={(e) => setSegmentDescription(e.target.value)}
               placeholder="Briefly describe this segment's purpose or targeting criteria"
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-cleeng-blue-500 focus:border-transparent"
               rows={2}
             />
           </div>
@@ -202,7 +202,7 @@ export const SegmentCreationModal: React.FC<SegmentCreationModalProps> = ({
                     value={industry}
                     onChange={(e) => setIndustry(e.target.value)}
                     placeholder="e.g., B2B SaaS, Healthcare, Financial Services"
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-cleeng-blue-500 focus:border-transparent text-sm"
                   />
                 </div>
                 
@@ -214,7 +214,7 @@ export const SegmentCreationModal: React.FC<SegmentCreationModalProps> = ({
                     value={geography}
                     onChange={(e) => setGeography(e.target.value)}
                     placeholder="e.g., North America, EMEA, Global"
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-cleeng-blue-500 focus:border-transparent text-sm"
                   />
                 </div>
               </div>
@@ -276,7 +276,7 @@ export const SegmentCreationModal: React.FC<SegmentCreationModalProps> = ({
             <div className="flex items-start">
               <Database size={18} className="text-blue-600 mt-0.5 mr-2" />
               <div>
-                <h3 className="text-sm font-medium text-blue-800 mb-2">Lead Enrichment</h3>
+                <h3 className="text-sm font-medium text-blue-800 mb-2">Apollo.io Enrichment</h3>
                 <div className="flex items-center">
                   <input
                     type="checkbox"
@@ -290,7 +290,7 @@ export const SegmentCreationModal: React.FC<SegmentCreationModalProps> = ({
                   </label>
                 </div>
                 <p className="text-xs text-blue-600 mt-2">
-                  When enabled, leads added to this segment will be automatically enriched with additional data and AI insights.
+                  When enabled, leads added to this segment will be automatically enriched with additional data from Apollo.io.
                 </p>
               </div>
             </div>

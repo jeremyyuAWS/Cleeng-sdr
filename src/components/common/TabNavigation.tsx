@@ -1,5 +1,5 @@
 import React from 'react';
-import { Target, Users, Mail, Calendar, BarChart3, Settings, Book, Sparkles, Shield, Headset, Lock, Server, Database, Shield as FileShield, ShieldAlert } from 'lucide-react';
+import { Target, Users, Mail, Calendar, BarChart3, Settings, Book, Sparkles, Shield, Headset, Lock, Server, Database, Shield as FileShield, ShieldAlert, Linkedin, BarChart } from 'lucide-react';
 
 interface Tab {
   id: string;
@@ -21,7 +21,7 @@ export const TabNavigation: React.FC<TabNavigationProps> = ({
   const getIcon = (iconName: string, isActive: boolean) => {
     const props = { 
       size: 18, 
-      className: isActive ? 'text-knox-blue-500' : 'text-gray-500' 
+      className: isActive ? 'text-cleeng-blue-500' : 'text-gray-500' 
     };
 
     switch (iconName) {
@@ -53,6 +53,10 @@ export const TabNavigation: React.FC<TabNavigationProps> = ({
         return <Server {...props} />;
       case 'Database':
         return <Database {...props} />;
+      case 'Linkedin':
+        return <Linkedin {...props} />;
+      case 'BarChart':
+        return <BarChart {...props} />;
       default:
         return <Target {...props} />;
     }
@@ -71,7 +75,7 @@ export const TabNavigation: React.FC<TabNavigationProps> = ({
               className={`
                 group inline-flex items-center py-4 px-1 border-b-2 font-medium text-sm
                 ${isActive 
-                  ? 'border-knox-teal-500 text-knox-blue-600' 
+                  ? 'border-cleeng-green-500 text-cleeng-blue-600' 
                   : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'}
                 transition-colors duration-200 whitespace-nowrap
               `}

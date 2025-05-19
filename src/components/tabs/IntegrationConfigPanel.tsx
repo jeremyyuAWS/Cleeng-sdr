@@ -13,7 +13,8 @@ import {
   Database, 
   Mail, 
   RefreshCw,
-  PlusCircle
+  PlusCircle,
+  Linkedin
 } from 'lucide-react';
 
 interface Integration {
@@ -21,7 +22,7 @@ interface Integration {
   name: string;
   description: string;
   logoPath: string;
-  category: 'AI' | 'Data' | 'Email' | 'CRM';
+  category: 'AI' | 'Data' | 'Email' | 'CRM' | 'Social';
   status: 'connected' | 'disconnected';
   benefits: string[];
 }
@@ -44,29 +45,42 @@ export const IntegrationConfigPanel: React.FC = () => {
       ]
     },
     {
-      id: 'leadgenius',
-      name: 'LeadGenius',
-      description: 'Lead enrichment, segmentation, and scoring',
-      logoPath: '/images/leadgenius logo.jpeg',
-      category: 'Data',
-      status: 'connected',
-      benefits: [
-        'Enriched contact data with 98% accuracy',
-        'AI-powered lead scoring',
-        'Data-driven segment recommendations',
-      ]
-    },
-    {
       id: 'apollo',
       name: 'Apollo.io',
-      description: 'B2B contact database and lead intelligence',
+      description: 'Lead enrichment and intelligence data',
       logoPath: '/images/Apollo logo.png',
       category: 'Data',
-      status: 'disconnected',
+      status: 'connected',
       benefits: [
         'Access to 200M+ B2B contacts',
         'Company and contact data enrichment',
         'Technographic and firmographic data',
+      ]
+    },
+    {
+      id: 'hubspot',
+      name: 'HubSpot',
+      description: 'Marketing and sales CRM with automation',
+      logoPath: '/images/hubspot_logo.png',
+      category: 'CRM',
+      status: 'connected',
+      benefits: [
+        'Two-way contact synchronization',
+        'Campaign performance tracking',
+        'Email sequence integration',
+      ]
+    },
+    {
+      id: 'salesforce',
+      name: 'Salesforce',
+      description: 'CRM integration for contact and opportunity management',
+      logoPath: '/images/Salesforcelogo2.png',
+      category: 'CRM',
+      status: 'connected',
+      benefits: [
+        'Bi-directional data sync',
+        'Campaign tracking in Salesforce',
+        'Opportunity attribution',
       ]
     },
     {
@@ -83,6 +97,19 @@ export const IntegrationConfigPanel: React.FC = () => {
       ]
     },
     {
+      id: 'linkedin',
+      name: 'LinkedIn Sales Navigator',
+      description: 'Advanced lead and company search tools',
+      logoPath: '/images/Linkedin logo square 2.png',
+      category: 'Social',
+      status: 'connected',
+      benefits: [
+        'Enhanced lead recommendations',
+        'Advanced filtering and search',
+        'Real-time lead updates',
+      ]
+    },
+    {
       id: 'sendgrid',
       name: 'SendGrid',
       description: 'Email delivery and marketing automation',
@@ -96,42 +123,16 @@ export const IntegrationConfigPanel: React.FC = () => {
       ]
     },
     {
-      id: 'salesforce',
-      name: 'Salesforce',
-      description: 'CRM integration for contact and opportunity management',
-      logoPath: '/images/Salesforcelogo2.png',
-      category: 'CRM',
-      status: 'disconnected',
-      benefits: [
-        'Bi-directional data sync',
-        'Campaign tracking in Salesforce',
-        'Opportunity attribution',
-      ]
-    },
-    {
-      id: 'hubspot',
-      name: 'HubSpot',
-      description: 'Marketing and sales CRM with automation',
-      logoPath: '/images/hubspot_logo.png',
-      category: 'CRM',
-      status: 'disconnected',
-      benefits: [
-        'Marketing automation integration',
-        'Contact record synchronization',
-        'Campaign performance tracking',
-      ]
-    },
-    {
-      id: 'linkedin',
-      name: 'LinkedIn Sales Navigator',
-      description: 'Advanced lead and company search tools',
-      logoPath: '/images/Linkedin logo square 2.png',
+      id: 'leadgenius',
+      name: 'LeadGenius',
+      description: 'Lead enrichment, segmentation, and scoring',
+      logoPath: '/images/leadgenius logo.jpeg',
       category: 'Data',
       status: 'disconnected',
       benefits: [
-        'Enhanced lead recommendations',
-        'Advanced filtering and search',
-        'Real-time lead updates',
+        'Enriched contact data with 98% accuracy',
+        'AI-powered lead scoring',
+        'Data-driven segment recommendations',
       ]
     },
   ];
@@ -146,6 +147,8 @@ export const IntegrationConfigPanel: React.FC = () => {
         return <Mail size={20} className="text-blue-600" />;
       case 'layers':
         return <Layers size={20} className="text-blue-600" />;
+      case 'linkedin':
+        return <Linkedin size={20} className="text-blue-600" />;
       default:
         return <Plug size={20} className="text-blue-600" />;
     }
@@ -220,6 +223,17 @@ export const IntegrationConfigPanel: React.FC = () => {
                 </div>
                 <Badge className="ml-2">{integrations.filter(i => i.category === 'CRM').length}</Badge>
               </button>
+              
+              <button 
+                className={`w-full text-left p-2 rounded-md ${activeCategory === 'social' ? 'bg-blue-50 text-blue-700' : 'hover:bg-gray-50'}`}
+                onClick={() => setActiveCategory('social')}
+              >
+                <div className="flex items-center">
+                  <Linkedin size={16} className="mr-2" />
+                  Social Media
+                </div>
+                <Badge className="ml-2">{integrations.filter(i => i.category === 'Social').length}</Badge>
+              </button>
             </div>
           </Card>
           
@@ -228,7 +242,7 @@ export const IntegrationConfigPanel: React.FC = () => {
               <div>
                 <h4 className="text-sm font-medium text-gray-700 mb-2">API Credits</h4>
                 <div className="w-full bg-gray-200 rounded-full h-2.5">
-                  <div className="bg-blue-600 h-2.5 rounded-full" style={{ width: '70%' }}></div>
+                  <div className="bg-cleeng-blue-600 h-2.5 rounded-full" style={{ width: '70%' }}></div>
                 </div>
                 <div className="flex justify-between mt-1">
                   <span className="text-xs text-gray-500">Used: 7,000</span>
@@ -267,7 +281,7 @@ export const IntegrationConfigPanel: React.FC = () => {
           <div className="mb-6">
             <h3 className="text-lg font-medium text-gray-900 mb-2">Available Integrations</h3>
             <p className="text-sm text-gray-600">
-              Connect your preferred services to enhance Jazon's capabilities.
+              Connect your preferred services to enhance Cleengage's capabilities.
             </p>
           </div>
           
@@ -289,6 +303,8 @@ export const IntegrationConfigPanel: React.FC = () => {
                         <Database size={20} className="text-blue-600" />
                       ) : integration.category === 'Email' ? (
                         <Mail size={20} className="text-blue-600" />
+                      ) : integration.category === 'Social' ? (
+                        <Linkedin size={20} className="text-blue-600" />
                       ) : (
                         <Layers size={20} className="text-blue-600" />
                       )}
@@ -344,12 +360,12 @@ export const IntegrationConfigPanel: React.FC = () => {
       </div>
       
       <ChatModal 
-        agentName="Jazon Admin Assistant"
+        agentName="Cleengage Admin Assistant"
         initialMessages={[
           {
             id: '1',
             role: 'assistant',
-            content: 'I can help you configure integrations and system settings. What would you like to set up or modify?',
+            content: 'I can help you configure CRM integrations and system settings. What would you like to set up or modify?',
             timestamp: new Date(),
           },
         ]}

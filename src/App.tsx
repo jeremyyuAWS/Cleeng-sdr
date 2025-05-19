@@ -10,6 +10,7 @@ import { KnowledgeLibrary } from './components/tabs/KnowledgeLibrary';
 import { SalesIntelligence } from './components/tabs/SalesIntelligence';
 import { ResponsibleAI } from './components/tabs/ResponsibleAI';
 import { CustomerSupport } from './components/tabs/CustomerSupport';
+import { LinkedInAutomation } from './components/tabs/LinkedInAutomation';
 import { WelcomeModal } from './components/common/WelcomeModal';
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
     { id: 'leads', label: 'Lead Enrichment', icon: 'Users' },
     { id: 'intelligence', label: 'Sales Intelligence', icon: 'Sparkles' },
     { id: 'email', label: 'Email Composer', icon: 'Mail' },
+    { id: 'linkedin', label: 'LinkedIn Outreach', icon: 'Linkedin' },
     { id: 'sequence', label: 'Sequence Scheduler', icon: 'Calendar' },
     { id: 'analytics', label: 'Analytics', icon: 'BarChart3' },
     { id: 'knowledge', label: 'Knowledge Library', icon: 'Book' },
@@ -39,6 +41,8 @@ function App() {
         return <SalesIntelligence />;
       case 'email':
         return <EmailComposer />;
+      case 'linkedin':
+        return <LinkedInAutomation />;
       case 'sequence':
         return <SequenceScheduler />;
       case 'analytics':
