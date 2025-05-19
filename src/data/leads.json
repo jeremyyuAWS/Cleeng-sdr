@@ -1,0 +1,204 @@
+{
+  "leads": [
+    {
+      "id": "1",
+      "name": "Sarah Reynolds",
+      "title": "CISO",
+      "company": "FinSecure Bank",
+      "email": "sarah.reynolds@finsecure.com",
+      "phone": "+1 (415) 123-4567",
+      "linkedIn": "linkedin.com/in/sarahreynolds",
+      "companySize": "1000-5000",
+      "industry": "Financial Services",
+      "location": "New York, NY",
+      "recentActivity": [
+        "Attended Kubernetes Security Summit 2023",
+        "Published article on 'Zero Trust in Banking Infrastructure'",
+        "Migrating core banking microservices to Kubernetes"
+      ],
+      "fitScore": 9.2,
+      "reason": "CISO at large bank with active Kubernetes migration. Their regulatory compliance requirements and container adoption make them an ideal fit for our runtime security solution.",
+      "personalizedNotes": "Previously worked at JP Morgan Chase where she led cloud-native security initiatives. Has experience with Kubernetes but looking for better runtime protection."
+    },
+    {
+      "id": "2",
+      "name": "Michael Chen",
+      "title": "DevSecOps Lead",
+      "company": "TechNova Systems",
+      "email": "michael.chen@technova.com",
+      "phone": "+1 (415) 234-5678",
+      "linkedIn": "linkedin.com/in/michaelchen",
+      "companySize": "201-500",
+      "industry": "SaaS/Technology",
+      "location": "San Francisco, CA",
+      "recentActivity": [
+        "Implementing GitOps with ArgoCD",
+        "Leading cloud-native security initiative",
+        "Evaluating runtime security solutions for containers"
+      ],
+      "fitScore": 8.7,
+      "reason": "DevSecOps lead at growing SaaS company with extensive Kubernetes deployments across multiple clouds. Looking for runtime security solutions to address container vulnerabilities.",
+      "personalizedNotes": "Active in Cloud Native Computing Foundation (CNCF) community. Recently presented on container security challenges at KubeCon."
+    },
+    {
+      "id": "3",
+      "name": "Alex Rodriguez",
+      "title": "Cloud Security Architect",
+      "company": "MedTech Health",
+      "email": "alex.rodriguez@medtech.com",
+      "phone": "+1 (617) 345-6789",
+      "linkedIn": "linkedin.com/in/alexrodriguez",
+      "companySize": "5000+",
+      "industry": "Healthcare",
+      "location": "Boston, MA",
+      "recentActivity": [
+        "Migrating legacy applications to containers",
+        "Implementing zero trust architecture",
+        "Evaluating HIPAA-compliant cloud solutions"
+      ],
+      "fitScore": 7.5,
+      "reason": "Security architect managing container security for healthcare applications. HIPAA compliance requirements and container adoption make them a strong fit for our solution.",
+      "personalizedNotes": "Concerned about container runtime protection for applications handling PHI data. Looking for compliance automation tools for Kubernetes."
+    },
+    {
+      "id": "4",
+      "name": "Jessica Wu",
+      "title": "Security Engineering Manager",
+      "company": "CloudFirst Technologies",
+      "email": "jessica.wu@cloudfirst.com",
+      "phone": "+1 (617) 456-7890",
+      "linkedIn": "linkedin.com/in/jessicawu",
+      "companySize": "201-500",
+      "industry": "Technology",
+      "location": "Austin, TX",
+      "recentActivity": [
+        "Implementing service mesh for zero trust",
+        "Automating security for CI/CD pipeline",
+        "Rolling out container security solution"
+      ],
+      "fitScore": 8.9,
+      "reason": "Leading security engineering at a cloud-native company with 100% Kubernetes infrastructure. Currently evaluating container security solutions with urgent need for runtime protection.",
+      "personalizedNotes": "Jessica previously implemented our competitor's solution but was unhappy with the performance impact on their production workloads."
+    },
+    {
+      "id": "5",
+      "name": "David Miller",
+      "title": "VP of Security Operations",
+      "company": "RetailGiant",
+      "email": "david.miller@retailgiant.com",
+      "phone": "+1 (212) 567-8901",
+      "linkedIn": "linkedin.com/in/davidmiller",
+      "companySize": "5000+",
+      "industry": "Retail",
+      "location": "Chicago, IL",
+      "recentActivity": [
+        "Migrating from VMs to containers",
+        "Implementing DevSecOps practices",
+        "Conducting Kubernetes security assessment"
+      ],
+      "fitScore": 6.8,
+      "reason": "Security leader at large retailer in early stages of container adoption. PCI-DSS compliance requirements and growing Kubernetes footprint make them a good fit despite being early in their journey.",
+      "personalizedNotes": "David is concerned about container security but has limited in-house Kubernetes expertise. Looking for solutions that don't require extensive configuration."
+    },
+    {
+      "id": "6",
+      "name": "Sophia Patel",
+      "title": "Security Architecture Lead",
+      "company": "InsureTech",
+      "email": "sophia.patel@insuretech.com",
+      "phone": "+1 (404) 678-9012",
+      "linkedIn": "linkedin.com/in/sophiapatel",
+      "companySize": "201-500",
+      "industry": "Insurance",
+      "location": "Atlanta, GA",
+      "recentActivity": [
+        "Leading cloud-native security transformation",
+        "Implementing zero trust for containerized apps",
+        "Evaluating container security vendors"
+      ],
+      "fitScore": 8.5,
+      "reason": "Security architect at a digital-first insurance company running containerized workloads in production. Looking for comprehensive container security with strong compliance capabilities.",
+      "personalizedNotes": "Sophia has prior experience with Kubernetes security and understands the challenges of securing containerized applications."
+    },
+    {
+      "id": "7",
+      "name": "James Wilson",
+      "title": "Information Security Director",
+      "company": "Capital Financial",
+      "email": "james.wilson@capitalfin.com",
+      "phone": "+1 (650) 789-0123",
+      "linkedIn": "linkedin.com/in/jameswilson",
+      "companySize": "1000-5000",
+      "industry": "Financial Services",
+      "location": "Chicago, IL",
+      "recentActivity": [
+        "Expanding Kubernetes environment for core banking applications",
+        "Implementing Zero Trust architecture",
+        "Evaluating runtime security vendors"
+      ],
+      "fitScore": 7.8,
+      "reason": "Security leader at financial institution with growing Kubernetes footprint. Strong need for container security that addresses compliance requirements without performance impact.",
+      "personalizedNotes": "James specifically mentioned runtime security and compliance automation as key requirements in their vendor evaluation criteria."
+    },
+    {
+      "id": "8",
+      "name": "Emily Johnson",
+      "title": "CISO",
+      "company": "TechCorp Solutions",
+      "email": "emily.johnson@techcorp.com",
+      "phone": "+1 (781) 890-1234",
+      "linkedIn": "linkedin.com/in/emilyjohnson",
+      "companySize": "1000-5000",
+      "industry": "Technology",
+      "location": "Seattle, WA",
+      "recentActivity": [
+        "Consolidating cloud security tools",
+        "Implementing container-native security",
+        "Leading Kubernetes security initiative"
+      ],
+      "fitScore": 9.0,
+      "reason": "Perfect title and company match. High probability of engagement as TechCorp continues to expand their cloud-native architecture and needs comprehensive container protection.",
+      "personalizedNotes": "Emily has been quoted discussing the challenges of securing dynamic container environments - directly addressed by our platform."
+    },
+    {
+      "id": "9",
+      "name": "Ryan Park",
+      "title": "Platform Security Lead",
+      "company": "DataStream",
+      "email": "ryan.park@datastream.io",
+      "phone": "+1 (415) 234-5678",
+      "linkedIn": "linkedin.com/in/ryanpark",
+      "companySize": "501-1000",
+      "industry": "Data Analytics",
+      "location": "San Francisco, CA",
+      "recentActivity": [
+        "Building security for multi-tenant Kubernetes platform",
+        "Implementing eBPF-based security monitoring",
+        "Evaluating runtime security solutions"
+      ],
+      "fitScore": 8.3,
+      "reason": "Platform security leader at data analytics company using Kubernetes extensively. Their multi-tenant architecture requires strong isolation and runtime security - perfect fit for our solution.",
+      "personalizedNotes": "Ryan previously worked with container security solutions and understands the limitations of traditional approaches."
+    },
+    {
+      "id": "10",
+      "name": "Lisa Thompson",
+      "title": "DevSecOps Manager",
+      "company": "HealthTech Innovations",
+      "email": "lisa.thompson@healthtechinnovations.com",
+      "phone": "+1 (415) 345-6789",
+      "linkedIn": "linkedin.com/in/lisathompson",
+      "companySize": "201-500",
+      "industry": "Healthcare Technology",
+      "location": "Boston, MA",
+      "recentActivity": [
+        "Implementing Kubernetes for patient data systems",
+        "Building automated security scanning pipelines",
+        "Establishing container security standards"
+      ],
+      "fitScore": 8.8,
+      "reason": "Security manager at healthcare tech company with growing Kubernetes deployment. Needs container security that addresses both runtime protection and HIPAA compliance requirements.",
+      "personalizedNotes": "Lisa is particularly concerned about container runtime security for applications processing PHI data and ensuring they maintain compliance."
+    }
+  ]
+}

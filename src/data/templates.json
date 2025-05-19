@@ -1,0 +1,36 @@
+{
+  "templates": [
+    {
+      "id": "1",
+      "name": "Initial Outreach",
+      "subject": "AI SDRs Built for {{company}}",
+      "body": "Hey {{firstName}},\n\nI noticed {{company}}'s recent focus on scaling your sales pipeline. Many {{industry}} companies face challenges with lead quality and SDR efficiency.\n\nOur AI-powered SDR platform helps companies like {{company}} to:\n• Increase qualified meetings by 40%\n• Reduce cost-per-meeting by 35%\n• Scale outreach without adding headcount\n\nWould you be open to a quick 15-minute call to explore how we've helped similar companies in the {{industry}} space?\n\nBest,\n[Your name]",
+      "tone": "professional",
+      "variables": ["firstName", "company", "industry"]
+    },
+    {
+      "id": "2",
+      "name": "Follow-up Email",
+      "subject": "Following up on AI SDRs for {{company}}",
+      "body": "Hey {{firstName}},\n\nI wanted to quickly follow up on my previous email about how our AI-powered SDR platform could help {{company}} improve sales efficiency.\n\nOur platform recently helped a {{industry}} company similar to yours book 27% more qualified meetings while reducing their SDR costs by 35%.\n\nWhen would be a good time for a quick 15-minute call this week?\n\nBest,\n[Your name]",
+      "tone": "friendly",
+      "variables": ["firstName", "company", "industry"]
+    },
+    {
+      "id": "3",
+      "name": "Case Study Share",
+      "subject": "How {{similarCompany}} achieved 40% more meetings with AI SDRs",
+      "body": "Hi {{firstName}},\n\nI thought you might be interested in how {{similarCompany}}, another {{industry}} company like {{company}}, achieved 40% more qualified meetings after implementing our AI SDR platform.\n\nI've attached a brief case study that outlines:\n• Their specific challenges (similar to what {{company}} might be facing)\n• The implementation process (took less than 2 weeks)\n• The ROI they achieved within 90 days\n\nWould you be interested in a quick call to discuss how we could implement a similar approach at {{company}}?\n\nRegards,\n[Your name]",
+      "tone": "professional",
+      "variables": ["firstName", "company", "industry", "similarCompany"]
+    },
+    {
+      "id": "4",
+      "name": "Final Outreach",
+      "subject": "Last thoughts on AI SDRs for {{company}}",
+      "body": "Hi {{firstName}},\n\nI've reached out a couple times about how our AI-powered SDR platform could help {{company}} scale your outreach efforts and improve conversion rates.\n\nI understand you're busy, so I'll make this my last outreach for now. If you're interested in learning how we've helped companies like {{similarCompany}} achieve:\n• 40% increase in qualified meetings\n• 35% reduction in cost-per-meeting\n• 65% more productive SDR teams\n\nYou can book time directly on my calendar here: [Calendar Link]\n\nOr simply reply to this email when timing is better.\n\nAll the best,\n[Your name]",
+      "tone": "professional",
+      "variables": ["firstName", "company", "similarCompany"]
+    }
+  ]
+}

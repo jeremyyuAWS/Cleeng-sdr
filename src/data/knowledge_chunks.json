@@ -1,0 +1,181 @@
+{
+  "documents": [
+    {
+      "id": "doc-1",
+      "title": "AccuKnox Container Security Overview",
+      "type": "pdf",
+      "dateUploaded": "2023-11-15",
+      "uploadedBy": "Sarah Johnson",
+      "size": "3.2 MB",
+      "tags": ["product", "overview", "container-security"],
+      "chunks": [
+        {
+          "id": "chunk-1-1",
+          "content": "AccuKnox provides a comprehensive container security platform designed to protect Kubernetes environments throughout the entire application lifecycle. Our solution combines runtime protection, compliance automation, and supply chain security to deliver defense-in-depth for cloud-native applications.",
+          "page": 1,
+          "embedding_id": "emb-1-1"
+        },
+        {
+          "id": "chunk-1-2",
+          "content": "Key features include runtime threat detection, Kubernetes security posture management, supply chain security with image scanning, and automated compliance controls. The platform integrates seamlessly with popular CI/CD tools and Kubernetes distributions including Amazon EKS, Google GKE, and Azure AKS.",
+          "page": 2,
+          "embedding_id": "emb-1-2"
+        },
+        {
+          "id": "chunk-1-3",
+          "content": "Pricing starts at $15 per node/month for the Standard tier, $25 per node/month for the Professional tier, and custom pricing for Enterprise deployments. All tiers include core runtime protection, with advanced features such as compliance automation and ML-based threat detection available in higher tiers.",
+          "page": 3,
+          "embedding_id": "emb-1-3"
+        }
+      ]
+    },
+    {
+      "id": "doc-2",
+      "title": "Kubernetes Security Best Practices",
+      "type": "pdf",
+      "dateUploaded": "2023-10-28",
+      "uploadedBy": "Michael Chen",
+      "size": "2.8 MB",
+      "tags": ["kubernetes", "best-practices", "security"],
+      "chunks": [
+        {
+          "id": "chunk-2-1",
+          "content": "Secure your Kubernetes clusters by implementing least privilege principles through properly configured RBAC policies. Restrict permissions to the minimum required for each role and regularly audit access controls to prevent privilege escalation attacks and unauthorized access to sensitive resources.",
+          "page": 1,
+          "embedding_id": "emb-2-1"
+        },
+        {
+          "id": "chunk-2-2",
+          "content": "Implement network policies to control pod-to-pod communication. By default, Kubernetes allows all pods to communicate with each other, creating potential lateral movement opportunities for attackers. Use network policies to enforce microsegmentation and limit network traffic based on the principle of least privilege.",
+          "page": 2,
+          "embedding_id": "emb-2-2"
+        },
+        {
+          "id": "chunk-2-3",
+          "content": "Secure the Kubernetes API server by enabling authentication mechanisms such as OIDC or client certificates, and implement proper authorization using RBAC. Restrict access to the API server from unauthorized networks and regularly rotate credentials to minimize the risk of compromise.",
+          "page": 3,
+          "embedding_id": "emb-2-3"
+        }
+      ]
+    },
+    {
+      "id": "doc-3",
+      "title": "Case Study - Financial Services Compliance",
+      "type": "pdf",
+      "dateUploaded": "2023-12-05",
+      "uploadedBy": "Alex Rodriguez",
+      "size": "1.5 MB",
+      "tags": ["case-study", "financial-services", "compliance"],
+      "chunks": [
+        {
+          "id": "chunk-3-1",
+          "content": "A leading financial institution with over $50 billion in assets implemented AccuKnox's container security platform to address challenges with PCI-DSS compliance in their Kubernetes environment. Prior to implementation, they were struggling with manual compliance processes and lacked visibility into container runtime activities.",
+          "page": 1,
+          "embedding_id": "emb-3-1"
+        },
+        {
+          "id": "chunk-3-2",
+          "content": "Results: Within 90 days of implementation, the institution achieved continuous compliance monitoring with automated controls for PCI-DSS, SOC 2, and internal security standards. The platform automatically enforced network segmentation policies and provided audit-ready reports, reducing compliance overhead by 60%.",
+          "page": 2,
+          "embedding_id": "emb-3-2"
+        },
+        {
+          "id": "chunk-3-3",
+          "content": "\"AccuKnox transformed our approach to container security and compliance. We now have real-time visibility into our Kubernetes environments and can automatically enforce security policies without slowing down development. Our compliance audits have become significantly easier.\" - Sarah Chen, CISO, Financial Services Company",
+          "page": 2,
+          "embedding_id": "emb-3-3"
+        }
+      ]
+    },
+    {
+      "id": "doc-4",
+      "title": "Runtime Protection Architecture",
+      "type": "pdf",
+      "dateUploaded": "2023-11-22",
+      "uploadedBy": "David Miller",
+      "size": "4.1 MB",
+      "tags": ["runtime-protection", "architecture", "technical"],
+      "chunks": [
+        {
+          "id": "chunk-4-1",
+          "content": "AccuKnox's runtime protection leverages eBPF technology to monitor container activities with minimal performance impact. The system observes system calls, network traffic, and process behaviors to detect and block malicious activities in real-time without requiring kernel modules or privileged access.",
+          "page": 1,
+          "embedding_id": "emb-4-1"
+        },
+        {
+          "id": "chunk-4-2",
+          "content": "The runtime protection component works by establishing a behavioral baseline of normal application activity and detecting deviations that may indicate compromise. This approach enables AccuKnox to identify zero-day attacks and sophisticated threats without relying solely on signature-based detection methods.",
+          "page": 2,
+          "embedding_id": "emb-4-2"
+        },
+        {
+          "id": "chunk-4-3",
+          "content": "Our runtime protection includes file integrity monitoring, process monitoring, network activity analysis, and privilege escalation detection. The system can be configured to alert on suspicious activities or automatically block them based on customizable security policies, providing both detection and prevention capabilities.",
+          "page": 3,
+          "embedding_id": "emb-4-3"
+        }
+      ]
+    },
+    {
+      "id": "doc-5",
+      "title": "Kubernetes Compliance Framework",
+      "type": "pdf",
+      "dateUploaded": "2023-12-10",
+      "uploadedBy": "Jessica Wu",
+      "size": "2.3 MB",
+      "tags": ["compliance", "kubernetes", "automation"],
+      "chunks": [
+        {
+          "id": "chunk-5-1",
+          "content": "The AccuKnox Compliance Framework automatically maps Kubernetes security controls to major compliance standards including PCI-DSS, HIPAA, SOC 2, ISO 27001, and GDPR. This mapping enables organizations to understand how their Kubernetes configurations align with regulatory requirements.",
+          "page": 1,
+          "embedding_id": "emb-5-1"
+        },
+        {
+          "id": "chunk-5-2",
+          "content": "Compliance automation works through continuous assessment of Kubernetes clusters against predefined compliance benchmarks such as CIS Kubernetes Benchmark and NIST guidelines. The system automatically detects misconfigurations and policy violations, providing remediation guidance and the option to auto-remediate certain issues.",
+          "page": 2,
+          "embedding_id": "emb-5-2"
+        },
+        {
+          "id": "chunk-5-3",
+          "content": "The compliance dashboard provides real-time visibility into compliance status across all clusters, with drill-down capabilities to identify specific violations. Automated report generation creates audit-ready documentation that significantly reduces the manual effort required for compliance verification and evidence collection.",
+          "page": 3,
+          "embedding_id": "emb-5-3"
+        }
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How does AccuKnox protect against container runtime threats?",
+      "answer": "AccuKnox's runtime protection leverages eBPF technology to monitor container activities with minimal performance impact (typically less than 1%). The system observes system calls, network traffic, and process behaviors to detect and block malicious activities in real-time. It establishes a behavioral baseline of normal application activity and detects deviations that may indicate compromise, enabling identification of zero-day attacks and sophisticated threats without relying solely on signature-based detection methods.",
+      "sources": ["doc-4"]
+    },
+    {
+      "question": "What compliance standards does AccuKnox support?",
+      "answer": "AccuKnox supports a wide range of compliance standards through its Compliance Framework, which automatically maps Kubernetes security controls to major compliance standards including PCI-DSS, HIPAA, SOC 2, ISO 27001, and GDPR. The system continuously assesses Kubernetes clusters against predefined compliance benchmarks such as CIS Kubernetes Benchmark and NIST guidelines, automatically detecting misconfigurations and policy violations, and providing remediation guidance.",
+      "sources": ["doc-5"]
+    },
+    {
+      "question": "How much does AccuKnox's container security solution cost?",
+      "answer": "AccuKnox's pricing starts at $15 per node/month for the Standard tier, $25 per node/month for the Professional tier, and custom pricing for Enterprise deployments. All tiers include core runtime protection features, with advanced capabilities such as compliance automation and ML-based threat detection available in the higher tiers. Custom pricing is available for large-scale deployments.",
+      "sources": ["doc-1"]
+    },
+    {
+      "question": "What are the best practices for securing Kubernetes clusters?",
+      "answer": "Key best practices for securing Kubernetes clusters include: 1) Implementing least privilege principles through properly configured RBAC policies, 2) Using network policies to control pod-to-pod communication and enforce microsegmentation, 3) Securing the Kubernetes API server with strong authentication and authorization controls, 4) Regularly scanning container images for vulnerabilities, 5) Implementing runtime security monitoring, and 6) Maintaining up-to-date Kubernetes versions to address known vulnerabilities.",
+      "sources": ["doc-2"]
+    },
+    {
+      "question": "Does AccuKnox integrate with CI/CD pipelines?",
+      "answer": "Yes, AccuKnox integrates seamlessly with popular CI/CD tools and workflows. The platform provides plugins for Jenkins, GitHub Actions, GitLab CI, and other CI/CD systems to enable security scanning during the build process. This allows organizations to identify and remediate vulnerabilities early in the development lifecycle, preventing insecure containers from being deployed to production environments.",
+      "sources": ["doc-1"]
+    },
+    {
+      "question": "How does AccuKnox handle compliance automation for regulated industries?",
+      "answer": "AccuKnox's compliance automation is particularly valuable for regulated industries such as financial services and healthcare. As demonstrated in our case studies, organizations in these sectors have achieved continuous compliance monitoring with automated controls for standards like PCI-DSS, HIPAA, and SOC 2. The platform automatically enforces network segmentation policies and provides audit-ready reports, reducing compliance overhead by up to 60% while ensuring security requirements are continuously met.",
+      "sources": ["doc-3", "doc-5"]
+    }
+  ]
+}

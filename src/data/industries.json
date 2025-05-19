@@ -1,0 +1,114 @@
+{
+  "industries": [
+    {
+      "id": "b2b-saas",
+      "name": "B2B SaaS",
+      "subIndustries": ["Marketing Tech", "Sales Tech", "HR Tech", "Finance Tech", "Developer Tools"],
+      "commonPainPoints": [
+        "Customer acquisition costs",
+        "Long sales cycles",
+        "High churn rates",
+        "Product adoption",
+        "Scaling customer success"
+      ],
+      "typicalRoles": [
+        "Chief Marketing Officer",
+        "VP of Marketing",
+        "Director of Demand Generation",
+        "Marketing Operations Manager",
+        "Growth Marketing Lead"
+      ],
+      "averageCompanySize": "50-500 employees",
+      "preferredChannels": ["Email", "LinkedIn", "Content Marketing", "Webinars"],
+      "keyMetrics": ["CAC", "LTV", "Churn Rate", "NPS", "MRR"]
+    },
+    {
+      "id": "fintech",
+      "name": "Financial Technology",
+      "subIndustries": ["Payments", "Lending", "Wealth Management", "Insurance Tech", "Blockchain"],
+      "commonPainPoints": [
+        "Regulatory compliance",
+        "Security concerns",
+        "Integration complexity",
+        "Customer trust",
+        "Legacy system migration"
+      ],
+      "typicalRoles": [
+        "Chief Financial Officer",
+        "Head of Digital Transformation",
+        "VP of Innovation",
+        "Director of Financial Operations",
+        "Risk Management Lead"
+      ],
+      "averageCompanySize": "100-1000 employees",
+      "preferredChannels": ["Direct Mail", "Industry Events", "Webinars", "White Papers"],
+      "keyMetrics": ["Conversion Rate", "Transaction Volume", "Customer Lifetime Value", "Fraud Prevention Rate"]
+    },
+    {
+      "id": "healthcare",
+      "name": "Healthcare",
+      "subIndustries": ["Health IT", "Telemedicine", "Medical Devices", "Healthcare Services", "Pharma Tech"],
+      "commonPainPoints": [
+        "HIPAA compliance",
+        "Interoperability",
+        "Patient engagement",
+        "Clinical workflow efficiency",
+        "Cost reduction"
+      ],
+      "typicalRoles": [
+        "Chief Medical Officer",
+        "Director of Clinical Informatics",
+        "Healthcare IT Director",
+        "VP of Patient Experience",
+        "Practice Manager"
+      ],
+      "averageCompanySize": "200-5000 employees",
+      "preferredChannels": ["Industry Conferences", "Case Studies", "Direct Mail", "Educational Webinars"],
+      "keyMetrics": ["Patient Satisfaction", "Treatment Outcomes", "Readmission Rates", "Cost Per Patient"]
+    },
+    {
+      "id": "ecommerce",
+      "name": "E-Commerce",
+      "subIndustries": ["D2C Brands", "Marketplaces", "Subscription Services", "Retail Tech", "Omnichannel"],
+      "commonPainPoints": [
+        "Customer acquisition",
+        "Cart abandonment",
+        "Inventory management",
+        "Shipping logistics",
+        "Returns processing"
+      ],
+      "typicalRoles": [
+        "E-Commerce Director",
+        "Digital Marketing Manager",
+        "Head of Online Merchandising",
+        "Customer Experience Lead",
+        "Supply Chain Manager"
+      ],
+      "averageCompanySize": "20-500 employees",
+      "preferredChannels": ["Social Media", "Email Marketing", "Influencer Partnerships", "Retargeting"],
+      "keyMetrics": ["Conversion Rate", "AOV", "CAC", "Customer Retention Rate", "ROAS"]
+    },
+    {
+      "id": "manufacturing",
+      "name": "Manufacturing",
+      "subIndustries": ["Industrial", "Consumer Goods", "Automotive", "Electronics", "Aerospace"],
+      "commonPainPoints": [
+        "Supply chain disruptions",
+        "Quality control",
+        "Operational efficiency",
+        "Legacy equipment modernization",
+        "Worker safety"
+      ],
+      "typicalRoles": [
+        "Plant Manager",
+        "VP of Operations",
+        "Supply Chain Director",
+        "Quality Assurance Manager",
+        "Production Manager"
+      ],
+      "averageCompanySize": "100-5000 employees",
+      "preferredChannels": ["Trade Shows", "Industry Publications", "Direct Mail", "Face-to-Face Meetings"],
+      "keyMetrics": ["Production Efficiency", "Defect Rate", "On-Time Delivery", "Equipment Downtime"]
+    }
+  ]
+}

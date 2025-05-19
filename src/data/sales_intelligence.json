@@ -1,0 +1,261 @@
+{
+  "leadInsights": [
+    {
+      "leadId": "1",
+      "talkingPoints": [
+        {
+          "title": "Recent $50M Series D Funding",
+          "details": "AdRoll raised $50M in Q3 2023, suggesting they may be expanding their marketing operations and technology stack.",
+          "source": "TechCrunch",
+          "relevanceScore": 9.2
+        },
+        {
+          "title": "First-Party Data Initiatives",
+          "details": "Sarah published an article on first-party data strategies, indicating this is a priority area where our platform's enhanced personalization could add value.",
+          "source": "AdRoll Blog",
+          "relevanceScore": 8.9
+        },
+        {
+          "title": "SaaStr Annual Presentation",
+          "details": "Sarah spoke about 'Performance Marketing at Scale', highlighting their focus on efficiency and measurement - core strengths of our platform.",
+          "source": "SaaStr Annual",
+          "relevanceScore": 8.5
+        }
+      ],
+      "competitiveInsights": [
+        {
+          "competitorName": "HubSpot",
+          "insightType": "Product Gap",
+          "details": "AdRoll lacks advanced AI lead scoring capabilities compared to HubSpot's predictive lead scoring. Our platform's AI-driven qualification offers a clear advantage.",
+          "confidenceScore": 87
+        },
+        {
+          "competitorName": "Marketo",
+          "insightType": "Integration",
+          "details": "AdRoll customers frequently mention challenges with Marketo integration. Our native two-way sync could be a compelling differentiator.",
+          "confidenceScore": 92
+        }
+      ],
+      "buyingSignals": [
+        {
+          "signal": "Job Postings",
+          "details": "AdRoll has 3 open SDR positions, indicating they're scaling their outbound efforts.",
+          "strengthScore": 8,
+          "detectedDate": "2023-12-15"
+        },
+        {
+          "signal": "Technology Changes",
+          "details": "Recently implemented Salesforce Marketing Cloud, suggesting a focus on marketing automation enhancements.",
+          "strengthScore": 7,
+          "detectedDate": "2023-11-10"
+        },
+        {
+          "signal": "Content Engagement",
+          "details": "Sarah engaged with 3 articles about AI in marketing within the past month.",
+          "strengthScore": 9,
+          "detectedDate": "2023-12-20"
+        }
+      ],
+      "bestTimeToContact": {
+        "day": "Tuesday",
+        "timeWindow": "9:30 AM - 11:00 AM",
+        "timezone": "PST",
+        "confidenceScore": 85,
+        "explanation": "Based on Sarah's past email engagement patterns and calendar analysis, Tuesday mornings show 42% higher response rates."
+      }
+    },
+    {
+      "leadId": "2",
+      "talkingPoints": [
+        {
+          "title": "Twilio Acquisition Impact",
+          "details": "Following Segment's acquisition by Twilio for $3.2B, they're likely consolidating their tech stack and evaluating efficiency tools.",
+          "source": "Bloomberg",
+          "relevanceScore": 9.0
+        },
+        {
+          "title": "ABM Strategy Expansion",
+          "details": "Michael is implementing an ABM strategy focused on enterprise accounts, which aligns perfectly with our platform's account-based personalization features.",
+          "source": "LinkedIn Updates",
+          "relevanceScore": 9.4
+        },
+        {
+          "title": "Demand Gen Team Expansion",
+          "details": "With 5 new job openings in the demand gen team, Segment is scaling outreach operations where our platform offers significant efficiency gains.",
+          "source": "Segment Careers Page",
+          "relevanceScore": 8.7
+        }
+      ],
+      "competitiveInsights": [
+        {
+          "competitorName": "Outreach",
+          "insightType": "Pricing Concern",
+          "details": "Michael has previously mentioned concerns about Outreach's pricing model in Revenue Collective discussions. Our transparent pricing could be advantageous.",
+          "confidenceScore": 78
+        },
+        {
+          "competitorName": "SalesLoft",
+          "insightType": "Feature Gap",
+          "details": "Segment users have reported limitations with SalesLoft's analytics capabilities. Our advanced attribution modeling would address this pain point.",
+          "confidenceScore": 83
+        }
+      ],
+      "buyingSignals": [
+        {
+          "signal": "Tech Stack Changes",
+          "details": "Recently implemented Clearbit for data enrichment, suggesting they're investing in sales intelligence.",
+          "strengthScore": 8,
+          "detectedDate": "2023-12-05"
+        },
+        {
+          "signal": "Event Attendance",
+          "details": "Michael attended a webinar on 'AI-Driven Lead Qualification' last week.",
+          "strengthScore": 9,
+          "detectedDate": "2023-12-18"
+        },
+        {
+          "signal": "Social Media Activity",
+          "details": "Has been engaging with posts about sales automation and AI prospecting tools.",
+          "strengthScore": 7,
+          "detectedDate": "2023-12-12"
+        }
+      ],
+      "bestTimeToContact": {
+        "day": "Wednesday",
+        "timeWindow": "1:00 PM - 3:00 PM",
+        "timezone": "PST",
+        "confidenceScore": 82,
+        "explanation": "Michael typically responds to emails and scheduling requests on Wednesday afternoons based on engagement history."
+      }
+    },
+    {
+      "leadId": "8",
+      "talkingPoints": [
+        {
+          "title": "MarketingOS Platform Launch",
+          "details": "ZoomInfo recently launched their MarketingOS platform, indicating strategic focus on marketing automation where our solution offers complementary capabilities.",
+          "source": "ZoomInfo Press Release",
+          "relevanceScore": 9.5
+        },
+        {
+          "title": "Chorus.ai Acquisition",
+          "details": "The $575M acquisition of Chorus.ai shows commitment to conversation intelligence, which pairs well with our platform's personalization engine.",
+          "source": "TechCrunch",
+          "relevanceScore": 8.6
+        },
+        {
+          "title": "ABM Enhancement Initiative",
+          "details": "Emily is expanding ZoomInfo's ABM capabilities with new intent data features, creating an opportunity to discuss how our platform enhances account-based targeting.",
+          "source": "ZoomInfo Webinar",
+          "relevanceScore": 9.2
+        }
+      ],
+      "competitiveInsights": [
+        {
+          "competitorName": "Apollo",
+          "insightType": "Data Quality Gap",
+          "details": "ZoomInfo has expressed concerns about Apollo's data accuracy. Our integration with their first-party data systems could be a compelling advantage.",
+          "confidenceScore": 91
+        },
+        {
+          "competitorName": "Outreach",
+          "insightType": "Analytics Limitations",
+          "details": "Emily has mentioned challenges with Outreach's attribution reporting in a recent interview. Our platform's multi-touch attribution would address this pain point.",
+          "confidenceScore": 85
+        }
+      ],
+      "buyingSignals": [
+        {
+          "signal": "Recent Quote",
+          "details": "Emily was quoted discussing challenges of scaling personalized outreach - a direct pain point our solution addresses.",
+          "strengthScore": 9,
+          "detectedDate": "2023-12-08"
+        },
+        {
+          "signal": "Website Behavior",
+          "details": "Multiple visits to our pricing and case studies pages from ZoomInfo IPs.",
+          "strengthScore": 8,
+          "detectedDate": "2023-12-17"
+        },
+        {
+          "signal": "Competitor Mention",
+          "details": "ZoomInfo mentioned evaluating SDR platforms in their quarterly earnings call.",
+          "strengthScore": 7,
+          "detectedDate": "2023-11-30"
+        }
+      ],
+      "bestTimeToContact": {
+        "day": "Thursday",
+        "timeWindow": "10:00 AM - 12:00 PM",
+        "timezone": "EST",
+        "confidenceScore": 88,
+        "explanation": "Based on Emily's calendar patterns and past meeting acceptances, mid-morning on Thursdays shows 37% higher meeting acceptance rates."
+      }
+    }
+  ],
+  "globalInsights": {
+    "industryTrends": [
+      {
+        "trend": "AI in Sales Development",
+        "description": "68% of B2B SaaS companies are increasing investment in AI-powered sales tools in 2024.",
+        "relevanceScore": 9.5,
+        "source": "Forrester Research"
+      },
+      {
+        "trend": "First-Party Data Prioritization",
+        "description": "With third-party cookies being deprecated, 72% of marketing leaders are increasing focus on first-party data strategies.",
+        "relevanceScore": 8.8,
+        "source": "Gartner"
+      },
+      {
+        "trend": "Sales Enablement Expansion",
+        "description": "The sales enablement market is projected to grow at 17.4% CAGR through 2027, reaching $7.3B.",
+        "relevanceScore": 8.2,
+        "source": "Markets and Markets"
+      }
+    ],
+    "competitiveLandscape": [
+      {
+        "competitor": "Outreach",
+        "marketShare": 27,
+        "strengths": ["Enterprise customer base", "Sequence automation"],
+        "weaknesses": ["Complex pricing", "Limited personalization", "Basic analytics"],
+        "recentMoves": "Launched 'Outreach Guide' for real-time coaching"
+      },
+      {
+        "competitor": "SalesLoft",
+        "marketShare": 22,
+        "strengths": ["Mid-market adoption", "UI/UX design"],
+        "weaknesses": ["AI capabilities", "Integration limitations", "Customization options"],
+        "recentMoves": "Acquired Costello for deal management"
+      },
+      {
+        "competitor": "Apollo.io",
+        "marketShare": 18,
+        "strengths": ["Contact database", "Affordable pricing"],
+        "weaknesses": ["Data accuracy", "Enterprise features", "Customer support"],
+        "recentMoves": "Released free tier to drive SMB adoption"
+      }
+    ],
+    "bestPractices": [
+      {
+        "title": "Personalized Video Messages",
+        "description": "Accounts using personalized video snippets see 37% higher response rates than text-only outreach.",
+        "implementationDifficulty": "Medium",
+        "impactScore": 8.5
+      },
+      {
+        "title": "Multi-Channel Sequences",
+        "description": "Sequences that incorporate email, phone, social, and direct mail touchpoints convert 42% better than single-channel approaches.",
+        "implementationDifficulty": "High",
+        "impactScore": 9.2
+      },
+      {
+        "title": "Buyer Intent Triggers",
+        "description": "Outreach triggered by buying intent signals (content downloads, website visits) has 3x higher conversion rates.",
+        "implementationDifficulty": "Medium",
+        "impactScore": 9.0
+      }
+    ]
+  }
+}

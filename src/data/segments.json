@@ -1,0 +1,52 @@
+{
+  "segments": [
+    {
+      "id": "segment-1",
+      "name": "High-Priority Prospects",
+      "description": "Key decision makers at ideal customer profile companies",
+      "criteria": {
+        "fitScore": {
+          "min": 8.5,
+          "max": 10
+        },
+        "roles": ["CMO", "VP Marketing", "CRO", "Head of Growth"],
+        "companySize": ["50-200", "201-500"]
+      },
+      "count": 42
+    },
+    {
+      "id": "segment-2",
+      "name": "Medium-Priority Prospects",
+      "description": "Good fit contacts that may need nurturing",
+      "criteria": {
+        "fitScore": {
+          "min": 7,
+          "max": 8.4
+        },
+        "roles": ["Director", "Manager", "Head of"],
+        "companySize": ["50-200", "201-500", "501-1000"]
+      },
+      "count": 87
+    },
+    {
+      "id": "segment-3",
+      "name": "Marketing Leaders",
+      "description": "All marketing decision makers regardless of fit score",
+      "criteria": {
+        "roles": ["CMO", "VP Marketing", "Director of Marketing", "Head of Marketing"],
+        "companySize": ["All"]
+      },
+      "count": 124
+    },
+    {
+      "id": "segment-4",
+      "name": "Enterprise Accounts",
+      "description": "Large companies with complex buying cycles",
+      "criteria": {
+        "companySize": ["1000+"],
+        "roles": ["All"]
+      },
+      "count": 56
+    }
+  ]
+}

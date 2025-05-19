@@ -1,0 +1,34 @@
+{
+  "icpExamples": [
+    {
+      "id": "1",
+      "name": "B2B SaaS Marketing Leaders",
+      "industry": "B2B SaaS",
+      "companySize": "50-200",
+      "roles": ["CMO", "VP Marketing", "Director of Marketing", "Head of Growth"],
+      "geography": "North America",
+      "budget": "$10k-50k/month",
+      "painPoints": ["Lead quality", "Sales efficiency", "Customer acquisition cost"]
+    },
+    {
+      "id": "2",
+      "name": "Enterprise Sales Leaders",
+      "industry": "Enterprise Software",
+      "companySize": "500+",
+      "roles": ["CRO", "VP Sales", "Director of Sales", "Head of Sales Operations"],
+      "geography": "Global",
+      "budget": "$50k+/month",
+      "painPoints": ["Sales cycle length", "Pipeline visibility", "Sales team efficiency"]
+    },
+    {
+      "id": "3",
+      "name": "Mid-Market Tech Companies",
+      "industry": "Technology",
+      "companySize": "201-500",
+      "roles": ["CEO", "COO", "Head of Revenue", "Director of Growth"],
+      "geography": "United States",
+      "budget": "$25k-100k/month",
+      "painPoints": ["Scaling outreach", "SDR retention", "Cost per acquisition"]
+    }
+  ]
+}

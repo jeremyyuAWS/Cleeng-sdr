@@ -1,0 +1,184 @@
+{
+  "templates": [
+    {
+      "id": "1",
+      "name": "Initial Security Outreach",
+      "subject": "Container Security Solution for {{company}}",
+      "body": "Hey {{firstName}},\n\nI noticed {{company}}'s focus on containerized applications and Kubernetes, and wanted to reach out about the security challenges that often come with this architecture.\n\nOur container security platform helps organizations like {{company}} to:\n• Detect and prevent runtime threats in containerized environments\n• Secure the entire application lifecycle from build to runtime\n• Achieve compliance with automated security policies\n\nWould you be open to a quick 15-minute call to explore how we've helped similar companies in the {{industry}} space strengthen their container security posture?\n\nBest,\n[Your name]",
+      "tone": "professional",
+      "variables": ["firstName", "company", "industry"],
+      "performance": {
+        "openRate": 42,
+        "clickRate": 12,
+        "replyRate": 8,
+        "meetingRate": 3.2
+      },
+      "bestTimeToSend": "Tuesday, 9:30 AM",
+      "bestDayOfWeek": "Tuesday",
+      "targetAudience": "CISOs, Security Architects, DevSecOps Leads",
+      "notes": "Most effective when sent to security decision makers at companies with active Kubernetes deployments"
+    },
+    {
+      "id": "2",
+      "name": "Security Follow-up",
+      "subject": "Following up on container security for {{company}}",
+      "body": "Hey {{firstName}},\n\nI wanted to quickly follow up on my previous email about how our container security platform could help {{company}} protect your Kubernetes environment.\n\nOur platform recently helped another {{industry}} organization reduce their security incidents by 75% while achieving continuous compliance with {{complianceStandard}}.\n\nWhen would be a good time for a quick 15-minute call this week?\n\nBest,\n[Your name]",
+      "tone": "friendly",
+      "variables": ["firstName", "company", "industry", "complianceStandard"],
+      "performance": {
+        "openRate": 38,
+        "clickRate": 9,
+        "replyRate": 5,
+        "meetingRate": 2.1
+      },
+      "bestTimeToSend": "Thursday, 10:00 AM",
+      "bestDayOfWeek": "Thursday",
+      "targetAudience": "All security roles",
+      "notes": "Send 3-4 days after initial outreach if no response"
+    },
+    {
+      "id": "3",
+      "name": "Security Case Study",
+      "subject": "How {{similarCompany}} secured their Kubernetes environment",
+      "body": "Hi {{firstName}},\n\nI thought you might be interested in how {{similarCompany}}, another {{industry}} organization like {{company}}, addressed their container security challenges after implementing our solution.\n\nTheir security team was facing:\n• Difficulty detecting runtime threats in containerized applications\n• Challenges meeting {{complianceStandard}} requirements in Kubernetes\n• Limited visibility into container activity\n\nAfter implementing our platform, they achieved:\n• 85% reduction in time to detect container threats\n• Automated compliance controls for {{complianceStandard}}\n• Complete visibility across their container ecosystem\n\nWould you be interested in a quick call to discuss how we could implement a similar approach at {{company}}?\n\nRegards,\n[Your name]",
+      "tone": "professional",
+      "variables": ["firstName", "company", "industry", "similarCompany", "complianceStandard"],
+      "performance": {
+        "openRate": 45,
+        "clickRate": 15,
+        "replyRate": 10,
+        "meetingRate": 4.2
+      },
+      "bestTimeToSend": "Wednesday, 2:00 PM",
+      "bestDayOfWeek": "Wednesday",
+      "targetAudience": "Security Directors, CISOs, DevSecOps Leads",
+      "notes": "Works best when similarCompany is a direct competitor or in same vertical"
+    },
+    {
+      "id": "4",
+      "name": "Final Security Outreach",
+      "subject": "Last thoughts on container security for {{company}}",
+      "body": "Hi {{firstName}},\n\nI've reached out a couple times about how our container security platform could help {{company}} protect your Kubernetes environment and meet compliance requirements.\n\nI understand you're busy, so I'll make this my last outreach for now. If you're interested in learning how we've helped companies like {{similarCompany}} achieve:\n• 85% reduction in container security incidents\n• Automated compliance for standards like {{complianceStandard}}\n• Zero performance impact runtime protection\n\nYou can book time directly on my calendar here: [Calendar Link]\n\nOr simply reply to this email when timing is better.\n\nAll the best,\n[Your name]",
+      "tone": "professional",
+      "variables": ["firstName", "company", "similarCompany", "complianceStandard"],
+      "performance": {
+        "openRate": 29,
+        "clickRate": 7,
+        "replyRate": 4,
+        "meetingRate": 1.8
+      },
+      "bestTimeToSend": "Friday, 11:00 AM",
+      "bestDayOfWeek": "Friday",
+      "targetAudience": "All security roles",
+      "notes": "Send 7-10 days after follow-up email if no response"
+    },
+    {
+      "id": "5",
+      "name": "Kubernetes Security Focus",
+      "subject": "Addressing {{painPoint}} in {{company}}'s Kubernetes environment",
+      "body": "Hello {{firstName}},\n\nI've been researching {{company}} and noticed you're using Kubernetes, which often comes with challenges around {{painPoint}} based on your recent {{triggerEvent}}.\n\nMany {{industry}} organizations we work with struggle with this exact issue. Our container security platform specifically addresses {{painPoint}} by:\n\n• {{benefitOne}}\n• {{benefitTwo}}\n• {{benefitThree}}\n\n{{companyExample}}, a {{industry}} company similar to yours, reduced their container security incidents by 78% within 90 days of implementation.\n\nDo you have 15 minutes this week to discuss how we could achieve similar results for {{company}}?\n\nBest regards,\n[Your name]",
+      "tone": "consultative",
+      "variables": ["firstName", "company", "industry", "painPoint", "triggerEvent", "benefitOne", "benefitTwo", "benefitThree", "companyExample"],
+      "performance": {
+        "openRate": 48,
+        "clickRate": 18,
+        "replyRate": 12,
+        "meetingRate": 5.1
+      },
+      "bestTimeToSend": "Tuesday, 10:30 AM",
+      "bestDayOfWeek": "Tuesday",
+      "targetAudience": "Security decision makers with specific Kubernetes challenges",
+      "notes": "Highly effective when container security pain point is accurately identified"
+    },
+    {
+      "id": "6",
+      "name": "Cloud Migration Security",
+      "subject": "Securing {{company}}'s container journey",
+      "body": "Hi {{firstName}},\n\nCongratulations on {{company}}'s cloud-native transformation! Moving to containerized applications is exciting but comes with unique security challenges.\n\nAs {{company}} scales your Kubernetes environment, you might be experiencing common security hurdles like:\n\n• Lack of runtime visibility into container behavior\n• Kubernetes configuration vulnerabilities\n• Compliance challenges in dynamic environments\n• Container supply chain risks\n\nOur platform has helped similar {{industry}} organizations implement security guardrails without slowing down development, typically reducing security incidents by 78% while accelerating deployment velocity.\n\nWould it make sense to connect for a quick 15-minute call to explore how we could support {{company}}'s container security needs?\n\nBest regards,\n[Your name]",
+      "tone": "friendly",
+      "variables": ["firstName", "company", "industry"],
+      "performance": {
+        "openRate": 52,
+        "clickRate": 16,
+        "replyRate": 14,
+        "meetingRate": 6.2
+      },
+      "bestTimeToSend": "Monday, 9:00 AM",
+      "bestDayOfWeek": "Monday",
+      "targetAudience": "Companies in active cloud migration or container adoption",
+      "notes": "Send within 30 days of detecting Kubernetes implementation or expansion"
+    },
+    {
+      "id": "7",
+      "name": "Witty Container Security",
+      "subject": "Container security for {{company}} (no box-themed jokes, promise)",
+      "body": "{{firstName}}, let's talk about what's happening inside your containers - and no, I don't mean leftovers in your office fridge.\n\nAs {{company}} scales your Kubernetes environment, securing those containers becomes about as straightforward as herding cats. Your DevOps team is moving at warp speed, but container threats are evolving even faster.\n\nOur platform is like a security superhero for your containers:\n• Runtime protection so fast it makes The Flash look slow\n• Lifecycle security that's more thorough than your most detail-obsessed team member\n• Compliance automation that's less painful than sitting through security governance meetings\n\nI can show you how it all works in a quick 15-minute demo. No long sales pitch - I promise it'll be shorter than your average Kubernetes deployment command.\n\nWhat do you say - shall we make your containers more secure than Fort Knox?\n\nSecurely yours,\n[Your name]",
+      "tone": "witty",
+      "variables": ["firstName", "company"],
+      "performance": {
+        "openRate": 44,
+        "clickRate": 13,
+        "replyRate": 11,
+        "meetingRate": 3.8
+      },
+      "bestTimeToSend": "Wednesday, 1:30 PM",
+      "bestDayOfWeek": "Wednesday",
+      "targetAudience": "Startups, tech-forward security teams",
+      "notes": "Works well with DevSecOps and technical security roles"
+    },
+    {
+      "id": "8",
+      "name": "Research-Based Security Outreach",
+      "subject": "Thoughts on {{company}}'s {{containerTech}} security approach",
+      "body": "Hi {{firstName}},\n\nI've been researching {{company}}'s cloud-native architecture and noticed your team is working with {{containerTech}}. Your recent {{contentReference}} on container orchestration security challenges was particularly insightful.\n\nYour point about {{securityPoint}} resonated because many organizations struggle with this exact challenge when scaling Kubernetes deployments.\n\nOur container security platform has been helping organizations like {{similarCompany}} address these issues with:\n• Runtime protection that detects and prevents threats in real-time\n• Automated compliance controls for standards like {{complianceStandard}}\n• Zero performance impact monitoring through eBPF technology\n\nWould you be open to a 15-minute conversation to explore how these capabilities might complement {{company}}'s security strategy?\n\nRegards,\n[Your name]",
+      "tone": "thoughtful",
+      "variables": ["firstName", "company", "containerTech", "contentReference", "securityPoint", "similarCompany", "complianceStandard"],
+      "performance": {
+        "openRate": 58,
+        "clickRate": 22,
+        "replyRate": 18,
+        "meetingRate": 7.5
+      },
+      "bestTimeToSend": "Thursday, 9:00 AM",
+      "bestDayOfWeek": "Thursday",
+      "targetAudience": "Security thought leaders, senior security architects",
+      "notes": "Requires thorough research but generates highest engagement rates"
+    },
+    {
+      "id": "9",
+      "name": "Container Security Value Proposition",
+      "subject": "3 ways to strengthen {{company}}'s container security",
+      "body": "Hi {{firstName}},\n\nAs the {{title}} at {{company}}, I imagine securing your containerized workloads is a key priority, especially with the rise in Kubernetes-targeted attacks.\n\nAfter researching {{company}}'s cloud infrastructure, I've identified three areas where our container security platform could significantly strengthen your posture:\n\n1. Runtime Security: Detect and prevent threats in running containers with zero performance impact using our eBPF-based monitoring\n\n2. Compliance Automation: Automatically enforce and document compliance with {{complianceStandard}} in your Kubernetes environment\n\n3. Supply Chain Protection: Secure your entire container lifecycle from build to runtime with continuous vulnerability management\n\nWe recently helped {{similarCompany}} in the {{industry}} space implement these controls, resulting in an 85% reduction in security incidents and 60% less time spent on compliance reporting.\n\nWould a brief 15-minute call make sense to explore if these approaches could deliver similar results for {{company}}?\n\nBest regards,\n[Your name]",
+      "tone": "professional",
+      "variables": ["firstName", "title", "company", "industry", "similarCompany", "complianceStandard"],
+      "performance": {
+        "openRate": 41,
+        "clickRate": 12,
+        "replyRate": 9,
+        "meetingRate": 3.5
+      },
+      "bestTimeToSend": "Tuesday, 10:00 AM",
+      "bestDayOfWeek": "Tuesday",
+      "targetAudience": "Security Directors, CISOs, DevOps Managers",
+      "notes": "Effective for security leaders focused on container protection"
+    },
+    {
+      "id": "10",
+      "name": "Security Referral Introduction",
+      "subject": "{{referralName}} suggested we connect about container security",
+      "body": "Hi {{firstName}},\n\nI hope this email finds you well. I recently spoke with {{referralName}} from {{referralCompany}}, who suggested I reach out to you regarding our container security platform.\n\n{{referralName}} mentioned that {{company}} is expanding your Kubernetes environment and facing challenges with {{painPoint}}.\n\nWe specialize in helping {{industry}} companies like yours:\n• Protect containerized workloads in runtime with zero performance impact\n• Automate security across the entire container lifecycle\n• Ensure continuous compliance with {{complianceStandard}}\n\nOur platform has helped similar organizations reduce security incidents by 85% while accelerating development velocity.\n\n{{referralName}} thought a brief conversation might be valuable. Would you be open to a 15-minute call to discuss how we could help {{company}}?\n\nBest regards,\n[Your name]",
+      "tone": "professional",
+      "variables": ["firstName", "company", "industry", "referralName", "referralCompany", "painPoint", "complianceStandard"],
+      "performance": {
+        "openRate": 62,
+        "clickRate": 20,
+        "replyRate": 24,
+        "meetingRate": 8.5
+      },
+      "bestTimeToSend": "Wednesday, 9:30 AM",
+      "bestDayOfWeek": "Wednesday",
+      "targetAudience": "All security roles",
+      "notes": "Most effective email type when a genuine referral exists"
+    }
+  ]
+}

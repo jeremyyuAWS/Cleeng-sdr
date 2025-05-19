@@ -1,0 +1,361 @@
+{
+  "overview": {
+    "timeRange": "Last 30 days",
+    "totalEmails": 12500,
+    "totalDelivered": 12100,
+    "totalOpened": 5082,
+    "totalClicked": 1452,
+    "totalReplied": 528,
+    "totalMeetings": 112,
+    "openRate": 42,
+    "clickRate": 12,
+    "replyRate": 4.4,
+    "meetingRate": 0.9,
+    "bounceRate": 3.2,
+    "unsubscribeRate": 0.8,
+    "performanceTrend": "positive"
+  },
+  "compareToLastPeriod": {
+    "openRate": {
+      "previous": 37,
+      "change": 5,
+      "trend": "up"
+    },
+    "replyRate": {
+      "previous": 3.8,
+      "change": 0.6,
+      "trend": "up"
+    },
+    "meetingRate": {
+      "previous": 0.7,
+      "change": 0.2,
+      "trend": "up"
+    },
+    "costPerMeeting": {
+      "previous": "$125",
+      "current": "$92",
+      "change": 26.4,
+      "trend": "down"
+    }
+  },
+  "sequencePerformance": [
+    {
+      "sequenceName": "Main Outreach Sequence",
+      "totalSent": 5600,
+      "totalDelivered": 5450,
+      "openRate": 44,
+      "clickRate": 13,
+      "replyRate": 5.2,
+      "meetingRate": 1.1,
+      "completionRate": 82,
+      "avgTimeToReply": "1.2 days",
+      "bestPerformingEmail": "Case Study Share",
+      "bestPerformingStep": 2
+    },
+    {
+      "sequenceName": "Enterprise Decision Maker Sequence",
+      "totalSent": 2100,
+      "totalDelivered": 2040,
+      "openRate": 38,
+      "clickRate": 10,
+      "replyRate": 4.8,
+      "meetingRate": 1.3,
+      "completionRate": 75,
+      "avgTimeToReply": "1.8 days",
+      "bestPerformingEmail": "Pain Point Focus",
+      "bestPerformingStep": 1
+    },
+    {
+      "sequenceName": "Follow-up Campaign",
+      "totalSent": 4800,
+      "totalDelivered": 4610,
+      "openRate": 36,
+      "clickRate": 9,
+      "replyRate": 3.1,
+      "meetingRate": 0.6,
+      "completionRate": 68,
+      "avgTimeToReply": "2.5 days",
+      "bestPerformingEmail": "Final Outreach",
+      "bestPerformingStep": 3
+    }
+  ],
+  "templatePerformance": [
+    {
+      "templateName": "Initial Outreach",
+      "openRate": 42,
+      "clickRate": 12,
+      "replyRate": 8,
+      "meetingRate": 3.2,
+      "trend": "stable"
+    },
+    {
+      "templateName": "Follow-up Email",
+      "openRate": 38,
+      "clickRate": 9,
+      "replyRate": 5,
+      "meetingRate": 2.1,
+      "trend": "up"
+    },
+    {
+      "templateName": "Case Study Share",
+      "openRate": 45,
+      "clickRate": 15,
+      "replyRate": 10,
+      "meetingRate": 4.2,
+      "trend": "up"
+    },
+    {
+      "templateName": "Final Outreach",
+      "openRate": 29,
+      "clickRate": 7,
+      "replyRate": 4,
+      "meetingRate": 1.8,
+      "trend": "down"
+    },
+    {
+      "templateName": "Pain Point Focus",
+      "openRate": 48,
+      "clickRate": 18,
+      "replyRate": 12,
+      "meetingRate": 5.1,
+      "trend": "up"
+    }
+  ],
+  "performanceByDay": {
+    "Monday": {
+      "openRate": 38,
+      "replyRate": 4.1
+    },
+    "Tuesday": {
+      "openRate": 42,
+      "replyRate": 5.2
+    },
+    "Wednesday": {
+      "openRate": 40,
+      "replyRate": 4.8
+    },
+    "Thursday": {
+      "openRate": 36,
+      "replyRate": 4.0
+    },
+    "Friday": {
+      "openRate": 29,
+      "replyRate": 3.1
+    },
+    "Saturday": {
+      "openRate": 18,
+      "replyRate": 1.5
+    },
+    "Sunday": {
+      "openRate": 22,
+      "replyRate": 1.8
+    }
+  },
+  "performanceByTime": {
+    "morning": {
+      "time": "8:00 AM - 11:00 AM",
+      "openRate": 45,
+      "replyRate": 5.3
+    },
+    "midday": {
+      "time": "11:00 AM - 2:00 PM",
+      "openRate": 38,
+      "replyRate": 4.2
+    },
+    "afternoon": {
+      "time": "2:00 PM - 5:00 PM",
+      "openRate": 32,
+      "replyRate": 3.8
+    },
+    "evening": {
+      "time": "5:00 PM - 8:00 PM",
+      "openRate": 26,
+      "replyRate": 2.9
+    }
+  },
+  "performanceByRole": [
+    {
+      "role": "C-Suite",
+      "openRate": 32,
+      "replyRate": 3.8,
+      "meetingRate": 1.2
+    },
+    {
+      "role": "VP Level",
+      "openRate": 38,
+      "replyRate": 4.5,
+      "meetingRate": 1.5
+    },
+    {
+      "role": "Director",
+      "openRate": 44,
+      "replyRate": 5.2,
+      "meetingRate": 1.8
+    },
+    {
+      "role": "Manager",
+      "openRate": 48,
+      "replyRate": 4.8,
+      "meetingRate": 1.3
+    }
+  ],
+  "bestPerformingDays": {
+    "data": [
+      {
+        "day": "Monday",
+        "openRate": 38,
+        "replyRate": 4.1,
+        "clickRate": 10.2,
+        "meetingRate": 0.8,
+        "bestTimeWindows": ["9:00 AM - 11:00 AM", "2:00 PM - 4:00 PM"]
+      },
+      {
+        "day": "Tuesday",
+        "openRate": 42,
+        "replyRate": 5.2,
+        "clickRate": 13.5,
+        "meetingRate": 1.2,
+        "bestTimeWindows": ["8:30 AM - 10:30 AM", "1:00 PM - 3:00 PM"]
+      },
+      {
+        "day": "Wednesday",
+        "openRate": 40,
+        "replyRate": 4.8,
+        "clickRate": 12.1,
+        "meetingRate": 1.1,
+        "bestTimeWindows": ["10:00 AM - 12:00 PM", "3:00 PM - 5:00 PM"]
+      },
+      {
+        "day": "Thursday",
+        "openRate": 36,
+        "replyRate": 4.0,
+        "clickRate": 11.4,
+        "meetingRate": 0.9,
+        "bestTimeWindows": ["9:00 AM - 11:00 AM", "2:00 PM - 4:00 PM"]
+      },
+      {
+        "day": "Friday",
+        "openRate": 29,
+        "replyRate": 3.1,
+        "clickRate": 8.6,
+        "meetingRate": 0.7,
+        "bestTimeWindows": ["10:30 AM - 12:30 PM"]
+      },
+      {
+        "day": "Saturday",
+        "openRate": 18,
+        "replyRate": 1.5,
+        "clickRate": 5.2,
+        "meetingRate": 0.4,
+        "bestTimeWindows": ["11:00 AM - 1:00 PM"]
+      },
+      {
+        "day": "Sunday",
+        "openRate": 22,
+        "replyRate": 1.8,
+        "clickRate": 6.4,
+        "meetingRate": 0.3,
+        "bestTimeWindows": ["4:00 PM - 6:00 PM"]
+      }
+    ],
+    "insights": [
+      "Tuesday is consistently the most effective day for email outreach with a 42% open rate",
+      "Mid-week (Tuesday-Thursday) shows 35% higher engagement than weekends",
+      "Morning emails (8:00 AM - 11:00 AM) generate 28% higher open rates than afternoon sends",
+      "Friday performance drops significantly after 2:00 PM",
+      "The ideal time window varies by prospect role: C-Suite executives engage more with early morning emails (7:00 AM - 9:00 AM)"
+    ],
+    "recommendations": [
+      "Schedule high-priority outreach for Tuesday mornings between 9:00-10:30 AM",
+      "Use Wednesday and Thursday as secondary optimal days",
+      "Adjust timing based on recipient timezone - send during recipient's local morning hours",
+      "Avoid Friday afternoons and weekends for important initial outreach",
+      "For C-Suite prospects, consider early morning sends (before 9:00 AM local time)"
+    ],
+    "hourlyPerformance": {
+      "hours": ["7AM", "8AM", "9AM", "10AM", "11AM", "12PM", "1PM", "2PM", "3PM", "4PM", "5PM", "6PM"],
+      "openRates": [35, 42, 48, 44, 39, 28, 30, 34, 33, 32, 25, 22],
+      "replyRates": [3.8, 4.5, 5.3, 5.0, 4.2, 3.0, 3.2, 3.9, 3.7, 3.5, 2.8, 2.4],
+      "optimalWindows": {
+        "openRate": "9:00 AM - 10:00 AM",
+        "replyRate": "9:00 AM - 10:00 AM", 
+        "clickRate": "9:00 AM - 11:00 AM",
+        "meetingBookings": "2:00 PM - 4:00 PM"
+      }
+    }
+  },
+  "performanceByIndustry": [
+    {
+      "industry": "B2B SaaS",
+      "openRate": 44,
+      "replyRate": 5.5,
+      "meetingRate": 1.9
+    },
+    {
+      "industry": "Financial Services",
+      "openRate": 36,
+      "replyRate": 3.8,
+      "meetingRate": 1.1
+    },
+    {
+      "industry": "Healthcare",
+      "openRate": 38,
+      "replyRate": 4.2,
+      "meetingRate": 1.2
+    },
+    {
+      "industry": "E-Commerce",
+      "openRate": 42,
+      "replyRate": 4.8,
+      "meetingRate": 1.5
+    },
+    {
+      "industry": "Manufacturing",
+      "openRate": 32,
+      "replyRate": 3.2,
+      "meetingRate": 0.9
+    }
+  ],
+  "aiInsights": [
+    {
+      "id": "1",
+      "category": "Timing",
+      "title": "Optimal Send Times",
+      "insight": "Tuesday mornings between 9:00-10:30 AM show 42% higher engagement rates for your target audience.",
+      "recommendation": "Schedule high-priority outreach during this window, especially for C-Suite and VP-level prospects.",
+      "confidenceScore": 87
+    },
+    {
+      "id": "2",
+      "category": "Content",
+      "title": "Subject Line Analysis",
+      "insight": "Subject lines mentioning specific pain points perform 35% better than generic product announcements.",
+      "recommendation": "Use the 'Pain Point Focus' template more broadly, particularly for prospects in the healthcare and financial services industries.",
+      "confidenceScore": 92
+    },
+    {
+      "id": "3",
+      "category": "Segmentation",
+      "title": "Role-Based Performance",
+      "insight": "Director-level prospects have the highest engagement (44% open rate, 5.2% reply rate) in your current campaigns.",
+      "recommendation": "Consider creating more Director-specific messaging and allocating more resources to this segment.",
+      "confidenceScore": 85
+    },
+    {
+      "id": "4",
+      "category": "Sequence Design",
+      "title": "Optimal Sequence Length",
+      "insight": "4-step sequences with 3-4 day intervals between touches show 28% better completion rates than longer sequences.",
+      "recommendation": "Shorten your 'Enterprise Decision Maker' sequence from 6 to 4 steps and adjust timing accordingly.",
+      "confidenceScore": 79
+    },
+    {
+      "id": "5",
+      "category": "Personalization",
+      "title": "Personalization Impact",
+      "insight": "Emails mentioning recent company news or events have 58% higher reply rates.",
+      "recommendation": "Integrate company news monitoring into your outreach workflow and prioritize timely, contextual references.",
+      "confidenceScore": 94
+    }
+  ]
+}

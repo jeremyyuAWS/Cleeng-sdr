@@ -1,0 +1,199 @@
+{
+  "companies": [
+    {
+      "id": "hubspot",
+      "name": "HubSpot",
+      "industry": "B2B SaaS",
+      "subIndustry": "Marketing Tech",
+      "size": "1000-5000",
+      "founded": 2006,
+      "headquarters": "Cambridge, MA",
+      "website": "hubspot.com",
+      "revenue": "$1.3B annual",
+      "funding": "Public (NYSE: HUBS)",
+      "description": "Inbound marketing, sales, and service software that helps companies attract visitors, convert leads, and close customers.",
+      "recentNews": [
+        {
+          "title": "HubSpot Reports Q2 2023 Results",
+          "date": "2023-08-02",
+          "summary": "Total revenue increased 25% year over year to $529.1M."
+        },
+        {
+          "title": "HubSpot Unveils New AI Features",
+          "date": "2023-05-09",
+          "summary": "Announced ChatSpot.ai - generative AI tools for marketing and sales teams."
+        }
+      ],
+      "technologies": ["CRM", "Marketing Automation", "Content Management", "Email Marketing", "Analytics"],
+      "competitors": ["Salesforce", "Marketo", "Mailchimp", "Zoho"],
+      "keyContacts": [
+        {
+          "name": "Yamini Rangan",
+          "title": "CEO",
+          "linkedin": "yamini-rangan-1963752"
+        },
+        {
+          "name": "Dharmesh Shah",
+          "title": "Co-founder & CTO",
+          "linkedin": "dharmesh"
+        }
+      ]
+    },
+    {
+      "id": "shopify",
+      "name": "Shopify",
+      "industry": "E-Commerce",
+      "subIndustry": "Retail Tech",
+      "size": "5000-10000",
+      "founded": 2006,
+      "headquarters": "Ottawa, Canada",
+      "website": "shopify.com",
+      "revenue": "$4.6B annual",
+      "funding": "Public (NYSE: SHOP)",
+      "description": "E-commerce platform that allows businesses to create and run their online stores with tools for inventory, payments, and shipping.",
+      "recentNews": [
+        {
+          "title": "Shopify Announces Q3 2023 Results",
+          "date": "2023-11-02",
+          "summary": "Revenue growth of 22% year over year to $1.7B."
+        },
+        {
+          "title": "Shopify Launches Commerce Components",
+          "date": "2023-01-23",
+          "summary": "New enterprise offering lets large retailers access Shopify's components individually."
+        }
+      ],
+      "technologies": ["E-commerce Platform", "POS", "Inventory Management", "Shipping Solutions", "Payment Processing"],
+      "competitors": ["BigCommerce", "WooCommerce", "Magento", "Wix"],
+      "keyContacts": [
+        {
+          "name": "Tobias Lütke",
+          "title": "CEO & Co-founder",
+          "linkedin": "tobi"
+        },
+        {
+          "name": "Harley Finkelstein",
+          "title": "President",
+          "linkedin": "harleyf"
+        }
+      ]
+    },
+    {
+      "id": "stripe",
+      "name": "Stripe",
+      "industry": "FinTech",
+      "subIndustry": "Payments",
+      "size": "1000-5000",
+      "founded": 2010,
+      "headquarters": "San Francisco, CA",
+      "website": "stripe.com",
+      "revenue": "$12B+ annual",
+      "funding": "Private ($95B valuation)",
+      "description": "Online payment processing for internet businesses, handling billions of dollars of transactions for businesses of all sizes.",
+      "recentNews": [
+        {
+          "title": "Stripe Raises $6.5B at $50B Valuation",
+          "date": "2023-03-15",
+          "summary": "Reduced from previous $95B valuation in 2021, reflecting broader market shift."
+        },
+        {
+          "title": "Stripe Launches Financial Connections",
+          "date": "2022-05-24",
+          "summary": "New product to simplify connecting financial account data for businesses."
+        }
+      ],
+      "technologies": ["Payment Processing", "Subscription Management", "Fraud Detection", "Invoicing", "Financial Reporting"],
+      "competitors": ["PayPal", "Square", "Adyen", "Braintree"],
+      "keyContacts": [
+        {
+          "name": "Patrick Collison",
+          "title": "CEO & Co-founder",
+          "linkedin": "patrickcollison"
+        },
+        {
+          "name": "John Collison",
+          "title": "President & Co-founder",
+          "linkedin": "johncollison"
+        }
+      ]
+    },
+    {
+      "id": "epic-systems",
+      "name": "Epic Systems",
+      "industry": "Healthcare",
+      "subIndustry": "Health IT",
+      "size": "10000+",
+      "founded": 1979,
+      "headquarters": "Verona, WI",
+      "website": "epic.com",
+      "revenue": "$3B+ annual",
+      "funding": "Private",
+      "description": "Healthcare software company that develops electronic health record systems used by healthcare organizations.",
+      "recentNews": [
+        {
+          "title": "Epic Announces New AI Assistant",
+          "date": "2023-08-28",
+          "summary": "Launched Cheers, an ambient documentation AI assistant for clinicians."
+        },
+        {
+          "title": "Epic Partners with Microsoft on Cloud Solutions",
+          "date": "2022-10-12",
+          "summary": "Collaboration to bring Epic's EHR solutions to Microsoft's Azure cloud platform."
+        }
+      ],
+      "technologies": ["Electronic Health Records", "Patient Portal", "Clinical Decision Support", "Interoperability", "Healthcare Analytics"],
+      "competitors": ["Cerner", "Allscripts", "MEDITECH", "Oracle Health"],
+      "keyContacts": [
+        {
+          "name": "Judy Faulkner",
+          "title": "CEO & Founder",
+          "linkedin": "judy-faulkner-70b21749"
+        },
+        {
+          "name": "Eric Helsher",
+          "title": "VP of Client Success",
+          "linkedin": "eric-helsher-72b9ba4"
+        }
+      ]
+    },
+    {
+      "id": "tesla",
+      "name": "Tesla",
+      "industry": "Manufacturing",
+      "subIndustry": "Automotive",
+      "size": "10000+",
+      "founded": 2003,
+      "headquarters": "Austin, TX",
+      "website": "tesla.com",
+      "revenue": "$81.5B annual",
+      "funding": "Public (NASDAQ: TSLA)",
+      "description": "Electric vehicle and clean energy company producing electric cars, battery storage, and solar products.",
+      "recentNews": [
+        {
+          "title": "Tesla Announces Q3 2023 Production and Delivery Numbers",
+          "date": "2023-10-02",
+          "summary": "Produced over 430,000 vehicles and delivered over 435,000 vehicles."
+        },
+        {
+          "title": "Tesla Unveils Cybertruck",
+          "date": "2023-11-30",
+          "summary": "Finally began deliveries of the long-awaited Cybertruck at a special event."
+        }
+      ],
+      "technologies": ["Electric Vehicles", "Battery Storage", "Solar Energy", "Autonomous Driving", "AI"],
+      "competitors": ["Ford", "General Motors", "Rivian", "Lucid Motors", "BYD"],
+      "keyContacts": [
+        {
+          "name": "Elon Musk",
+          "title": "CEO",
+          "linkedin": "elonmusk"
+        },
+        {
+          "name": "Tom Zhu",
+          "title": "SVP, Automotive",
+          "linkedin": "tom-zhu-8b73568"
+        }
+      ]
+    }
+  ]
+}
