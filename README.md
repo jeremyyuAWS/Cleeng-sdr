@@ -1,7 +1,3 @@
-Here's a focused summary of **Cleeng’s key integration requirements** and priorities based on the transcript and discussion highlights. This can guide how you adjust the **Jazon 3.0 app** for their use case:
-
----
-
 ## 🔑 Cleeng Integration Requirements for Jazon 3.0 App
 
 ### 1. **Lead Enrichment + Research via Apollo.io**
