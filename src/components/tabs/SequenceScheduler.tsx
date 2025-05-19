@@ -29,7 +29,8 @@ import {
   User,
   Linkedin,
   BarChart2,
-  RefreshCw
+  RefreshCw,
+  CheckCircle
 } from 'lucide-react';
 
 interface SequenceStep {
