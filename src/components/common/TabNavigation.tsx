@@ -1,5 +1,5 @@
 import React from 'react';
-import { Target, Users, Mail, Calendar, BarChart3, Settings, Book, Sparkles, Shield, Headset, Lock, Server, Database, Shield as FileShield, ShieldAlert, Linkedin, BarChart } from 'lucide-react';
+import { Target, Users, Mail, Calendar, BarChart3, Settings, Book, Sparkles, Shield, Headset, Lock, Server, Database, Shield as FileShield, ShieldAlert } from 'lucide-react';
 
 interface Tab {
   id: string;
@@ -53,10 +53,6 @@ export const TabNavigation: React.FC<TabNavigationProps> = ({
         return <Server {...props} />;
       case 'Database':
         return <Database {...props} />;
-      case 'Linkedin':
-        return <Linkedin {...props} />;
-      case 'BarChart':
-        return <BarChart {...props} />;
       default:
         return <Target {...props} />;
     }

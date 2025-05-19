@@ -42,8 +42,8 @@ export const WelcomeModal: React.FC<WelcomeModalProps> = ({ onClose }) => {
         return (
           <div className="space-y-4">
             <p className="text-gray-600">
-              Cleengage is a comprehensive AI-powered platform that guides you through the entire sales outreach workflow - 
-              from defining your ideal customer profile to launching multi-touch email sequences and syncing with your CRM systems.
+              Cleengage is a comprehensive AI-powered platform that guides you through the entire outreach workflow - 
+              from defining your ideal customer profile to launching multi-touch email sequences and syncing with your CRM.
             </p>
             
             <div className="bg-blue-50 p-4 rounded-md">
@@ -55,7 +55,7 @@ export const WelcomeModal: React.FC<WelcomeModalProps> = ({ onClose }) => {
                 </li>
                 <li className="flex items-start">
                   <span className="text-blue-500 mr-2">•</span>
-                  <span>Enrich contacts automatically with Apollo.io integration</span>
+                  <span>Enrich contacts automatically with company and intent data</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-blue-500 mr-2">•</span>
@@ -75,7 +75,7 @@ export const WelcomeModal: React.FC<WelcomeModalProps> = ({ onClose }) => {
                 </li>
                 <li className="flex items-start">
                   <span className="text-blue-500 mr-2">•</span>
-                  <span>Sync all activities with HubSpot and Salesforce</span>
+                  <span>Access knowledge base for consistent communications</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-blue-500 mr-2">•</span>
@@ -94,7 +94,7 @@ export const WelcomeModal: React.FC<WelcomeModalProps> = ({ onClose }) => {
               </div>
               <div>
                 <h4 className="font-medium text-gray-900 mb-1">Ideal Customer Profile</h4>
-                <p className="text-sm text-gray-600">Define your ideal customer profile with AI assistance</p>
+                <p className="text-sm text-gray-600">Define your ideal customer profile for targeted outreach</p>
               </div>
             </div>
             
@@ -136,7 +136,7 @@ export const WelcomeModal: React.FC<WelcomeModalProps> = ({ onClose }) => {
               </div>
               <div>
                 <h4 className="font-medium text-gray-900 mb-1">Contact Enrichment</h4>
-                <p className="text-sm text-gray-600">Enrich contacts with Apollo.io data and AI-powered insights</p>
+                <p className="text-sm text-gray-600">Discover and enrich contacts with AI-powered insights</p>
               </div>
             </div>
             
@@ -148,11 +148,11 @@ export const WelcomeModal: React.FC<WelcomeModalProps> = ({ onClose }) => {
               </li>
               <li className="flex items-start">
                 <span className="text-blue-500 mr-2">•</span>
-                <span>One-click contact enrichment with Apollo.io integration</span>
+                <span>One-click contact enrichment with company and intent data</span>
               </li>
               <li className="flex items-start">
                 <span className="text-blue-500 mr-2">•</span>
-                <span>Multiple data providers including Cleengage, Apollo, and LinkedIn</span>
+                <span>Multiple data providers including Cleengage, LeadGenius, and Apollo</span>
               </li>
               <li className="flex items-start">
                 <span className="text-blue-500 mr-2">•</span>
@@ -186,7 +186,7 @@ export const WelcomeModal: React.FC<WelcomeModalProps> = ({ onClose }) => {
               </div>
               <div>
                 <h4 className="font-medium text-gray-900 mb-1">Sales Intelligence</h4>
-                <p className="text-sm text-gray-600">Personalized sales insights to boost engagement effectiveness</p>
+                <p className="text-sm text-gray-600">Personalized insights to boost sales effectiveness</p>
               </div>
             </div>
             
@@ -254,14 +254,10 @@ export const WelcomeModal: React.FC<WelcomeModalProps> = ({ onClose }) => {
                 <span className="text-blue-500 mr-2">•</span>
                 <span>Email quality check with AI recommendations</span>
               </li>
-              <li className="flex items-start">
-                <span className="text-blue-500 mr-2">•</span>
-                <span>CRM template synchronization (HubSpot & Salesforce)</span>
-              </li>
             </ul>
             
             <div className="bg-blue-50 p-3 rounded-md text-xs text-blue-700">
-              <strong>Pro Tip:</strong> Start with a template, then use the AI to adjust the tone and personalize based on your target audience's specific needs. The quality check will ensure high deliverability.
+              <strong>Pro Tip:</strong> Start with a template, then use the AI to adjust the tone and personalize based on your target audience. The quality check will ensure high deliverability.
             </div>
           </div>
         );
@@ -299,10 +295,6 @@ export const WelcomeModal: React.FC<WelcomeModalProps> = ({ onClose }) => {
               <li className="flex items-start">
                 <span className="text-blue-500 mr-2">•</span>
                 <span>Performance analytics for each sequence step</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-blue-500 mr-2">•</span>
-                <span>Direct HubSpot and Salesforce sequence sync</span>
               </li>
             </ul>
             
@@ -346,10 +338,6 @@ export const WelcomeModal: React.FC<WelcomeModalProps> = ({ onClose }) => {
                 <span className="text-blue-500 mr-2">•</span>
                 <span>AI-generated insights with actionable recommendations</span>
               </li>
-              <li className="flex items-start">
-                <span className="text-blue-500 mr-2">•</span>
-                <span>CRM analytics sync to track full-funnel performance</span>
-              </li>
             </ul>
             
             <div className="bg-blue-50 p-3 rounded-md text-xs text-blue-700">
@@ -366,7 +354,7 @@ export const WelcomeModal: React.FC<WelcomeModalProps> = ({ onClose }) => {
               </div>
               <div>
                 <h4 className="font-medium text-gray-900 mb-1">Knowledge Library</h4>
-                <p className="text-sm text-gray-600">AI answers grounded in your sales documentation</p>
+                <p className="text-sm text-gray-600">AI answers grounded in your documentation</p>
               </div>
             </div>
             
@@ -374,7 +362,7 @@ export const WelcomeModal: React.FC<WelcomeModalProps> = ({ onClose }) => {
             <ul className="space-y-1 text-sm text-gray-600 mb-4">
               <li className="flex items-start">
                 <span className="text-blue-500 mr-2">•</span>
-                <span>Document repository for company materials and sales knowledge</span>
+                <span>Document repository for company materials and knowledge</span>
               </li>
               <li className="flex items-start">
                 <span className="text-blue-500 mr-2">•</span>
@@ -395,7 +383,7 @@ export const WelcomeModal: React.FC<WelcomeModalProps> = ({ onClose }) => {
             </ul>
             
             <div className="bg-blue-50 p-3 rounded-md text-xs text-blue-700">
-              <strong>Pro Tip:</strong> Upload your product documentation, case studies, and sales collateral to ensure the AI gives accurate, consistent answers to prospects' questions.
+              <strong>Pro Tip:</strong> Upload your product documentation, case studies, and collateral to ensure the AI gives accurate, consistent answers to prospects' questions.
             </div>
           </div>
         );
@@ -408,7 +396,7 @@ export const WelcomeModal: React.FC<WelcomeModalProps> = ({ onClose }) => {
               </div>
               <div>
                 <h4 className="font-medium text-gray-900 mb-1">AI Support</h4>
-                <p className="text-sm text-gray-600">AI-powered assistance for your product and sales questions</p>
+                <p className="text-sm text-gray-600">AI-powered assistance for your product questions</p>
               </div>
             </div>
             
@@ -420,7 +408,7 @@ export const WelcomeModal: React.FC<WelcomeModalProps> = ({ onClose }) => {
               </li>
               <li className="flex items-start">
                 <span className="text-blue-500 mr-2">•</span>
-                <span>Knowledge-grounded responses to sales questions</span>
+                <span>Knowledge-grounded responses to product questions</span>
               </li>
               <li className="flex items-start">
                 <span className="text-blue-500 mr-2">•</span>
@@ -433,10 +421,6 @@ export const WelcomeModal: React.FC<WelcomeModalProps> = ({ onClose }) => {
               <li className="flex items-start">
                 <span className="text-blue-500 mr-2">•</span>
                 <span>Conversation history and customer context retention</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-blue-500 mr-2">•</span>
-                <span>Customer-facing chatbot integration</span>
               </li>
             </ul>
             
@@ -480,10 +464,6 @@ export const WelcomeModal: React.FC<WelcomeModalProps> = ({ onClose }) => {
                 <span className="text-blue-500 mr-2">•</span>
                 <span>Comprehensive audit logging and violation tracking</span>
               </li>
-              <li className="flex items-start">
-                <span className="text-blue-500 mr-2">•</span>
-                <span>OAuth integration security for CRM and social platforms</span>
-              </li>
             </ul>
             
             <div className="bg-blue-50 p-3 rounded-md text-xs text-blue-700">
@@ -511,7 +491,7 @@ export const WelcomeModal: React.FC<WelcomeModalProps> = ({ onClose }) => {
           </div>
           
           <p className="mt-4 text-gray-600">
-            This advanced AI platform guides you through personalized engagement with your prospects, from defining your ICP to launching multi-touch email sequences with CRM synchronization.
+            This advanced AI platform guides you through personalized engagement with precision, from defining your ICP to launching multi-touch email sequences and syncing with your CRM.
           </p>
           
           <div className="mt-6">

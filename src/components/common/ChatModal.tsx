@@ -52,7 +52,7 @@ export const ChatModal: React.FC<ChatModalProps> = ({
       {
         id: '1',
         role: 'assistant',
-        content: `Hi there! I'm your Cleengage assistant. I can help with lead enrichment, email outreach, and CRM synchronization questions. How can I assist you today?`,
+        content: `Hi there! I'm your Cleengage assistant. I can help with outreach, CRM sync, and engagement questions. How can I assist you today?`,
         timestamp: new Date(),
       }
     ]);
@@ -105,7 +105,7 @@ export const ChatModal: React.FC<ChatModalProps> = ({
         onClick={toggleModal}
         className="fixed bottom-6 right-6 bg-cleeng-blue-600 hover:bg-cleeng-blue-700 text-white p-3 rounded-full shadow-lg transition-all duration-200 z-40"
       >
-        <Shield size={24} />
+        <MessageSquare size={24} />
       </button>
     );
   }
@@ -115,7 +115,7 @@ export const ChatModal: React.FC<ChatModalProps> = ({
       <div className="p-4 border-b border-gray-200 flex justify-between items-center bg-gradient-to-r from-cleeng-blue-600 to-cleeng-green-500 text-white rounded-t-lg">
         <div className="flex items-center">
           <div className="w-8 h-8 rounded-full bg-white mr-2 flex items-center justify-center">
-            <Lock size={16} className="text-cleeng-blue-600" />
+            <MessageSquare size={16} className="text-cleeng-blue-600" />
           </div>
           <h3 className="font-medium">{agentName}</h3>
         </div>
