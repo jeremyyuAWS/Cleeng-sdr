@@ -27,7 +27,7 @@ export const WelcomeModal: React.FC<WelcomeModalProps> = ({ onClose }) => {
     { id: 'overview', label: 'Overview' },
     { id: 'icp', label: 'Ideal Customer Profile' },
     { id: 'leads', label: 'Contact Enrichment' },
-    { id: 'intelligence', label: 'Security Intelligence' },
+    { id: 'intelligence', label: 'Sales Intelligence' },
     { id: 'email', label: 'Engagement Composer' },
     { id: 'sequence', label: 'Sequence Scheduler' },
     { id: 'analytics', label: 'Analytics Dashboard' },
@@ -42,8 +42,8 @@ export const WelcomeModal: React.FC<WelcomeModalProps> = ({ onClose }) => {
         return (
           <div className="space-y-4">
             <p className="text-gray-600">
-              KnoxEngage is a comprehensive AI-powered platform that guides you through the entire cybersecurity-focused outreach workflow - 
-              from defining your ideal customer profile to launching multi-touch email sequences and analyzing results.
+              Cleengage is a comprehensive AI-powered platform that guides you through the entire sales outreach workflow - 
+              from defining your ideal customer profile to launching multi-touch email sequences and syncing with your CRM systems.
             </p>
             
             <div className="bg-blue-50 p-4 rounded-md">
@@ -55,11 +55,11 @@ export const WelcomeModal: React.FC<WelcomeModalProps> = ({ onClose }) => {
                 </li>
                 <li className="flex items-start">
                   <span className="text-blue-500 mr-2">•</span>
-                  <span>Enrich contacts automatically with company and security data</span>
+                  <span>Enrich contacts automatically with Apollo.io integration</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-blue-500 mr-2">•</span>
-                  <span>Get personalized security intelligence and talking points</span>
+                  <span>Get personalized sales intelligence and talking points</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-blue-500 mr-2">•</span>
@@ -75,7 +75,7 @@ export const WelcomeModal: React.FC<WelcomeModalProps> = ({ onClose }) => {
                 </li>
                 <li className="flex items-start">
                   <span className="text-blue-500 mr-2">•</span>
-                  <span>Access knowledge base for consistent cybersecurity communications</span>
+                  <span>Sync all activities with HubSpot and Salesforce</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-blue-500 mr-2">•</span>
@@ -94,7 +94,7 @@ export const WelcomeModal: React.FC<WelcomeModalProps> = ({ onClose }) => {
               </div>
               <div>
                 <h4 className="font-medium text-gray-900 mb-1">Ideal Customer Profile</h4>
-                <p className="text-sm text-gray-600">Define your ideal customer profile for cybersecurity solutions</p>
+                <p className="text-sm text-gray-600">Define your ideal customer profile with AI assistance</p>
               </div>
             </div>
             
@@ -110,7 +110,7 @@ export const WelcomeModal: React.FC<WelcomeModalProps> = ({ onClose }) => {
               </li>
               <li className="flex items-start">
                 <span className="text-blue-500 mr-2">•</span>
-                <span>Security concern identification for personalized messaging</span>
+                <span>Pain point identification for personalized messaging</span>
               </li>
               <li className="flex items-start">
                 <span className="text-blue-500 mr-2">•</span>
@@ -123,7 +123,7 @@ export const WelcomeModal: React.FC<WelcomeModalProps> = ({ onClose }) => {
             </ul>
             
             <div className="bg-blue-50 p-3 rounded-md text-xs text-blue-700">
-              <strong>Pro Tip:</strong> Start by analyzing your company website to let AI suggest an initial ICP, then refine based on your best-performing cybersecurity customers.
+              <strong>Pro Tip:</strong> Start by analyzing your company website to let AI suggest an initial ICP, then refine based on your best-performing customers.
             </div>
           </div>
         );
@@ -136,7 +136,7 @@ export const WelcomeModal: React.FC<WelcomeModalProps> = ({ onClose }) => {
               </div>
               <div>
                 <h4 className="font-medium text-gray-900 mb-1">Contact Enrichment</h4>
-                <p className="text-sm text-gray-600">Discover and enrich contacts with cybersecurity data and AI-powered insights</p>
+                <p className="text-sm text-gray-600">Enrich contacts with Apollo.io data and AI-powered insights</p>
               </div>
             </div>
             
@@ -148,11 +148,11 @@ export const WelcomeModal: React.FC<WelcomeModalProps> = ({ onClose }) => {
               </li>
               <li className="flex items-start">
                 <span className="text-blue-500 mr-2">•</span>
-                <span>One-click contact enrichment with company and security data</span>
+                <span>One-click contact enrichment with Apollo.io integration</span>
               </li>
               <li className="flex items-start">
                 <span className="text-blue-500 mr-2">•</span>
-                <span>Multiple data providers including KnoxEngage, LeadGenius, and Apollo</span>
+                <span>Multiple data providers including Cleengage, Apollo, and LinkedIn</span>
               </li>
               <li className="flex items-start">
                 <span className="text-blue-500 mr-2">•</span>
@@ -185,8 +185,8 @@ export const WelcomeModal: React.FC<WelcomeModalProps> = ({ onClose }) => {
                 <Sparkles size={18} className="text-blue-600" />
               </div>
               <div>
-                <h4 className="font-medium text-gray-900 mb-1">Security Intelligence</h4>
-                <p className="text-sm text-gray-600">Personalized cybersecurity insights to boost sales effectiveness</p>
+                <h4 className="font-medium text-gray-900 mb-1">Sales Intelligence</h4>
+                <p className="text-sm text-gray-600">Personalized sales insights to boost engagement effectiveness</p>
               </div>
             </div>
             
@@ -198,11 +198,11 @@ export const WelcomeModal: React.FC<WelcomeModalProps> = ({ onClose }) => {
               </li>
               <li className="flex items-start">
                 <span className="text-blue-500 mr-2">•</span>
-                <span>Competitive intelligence on other security vendors</span>
+                <span>Competitive intelligence on other vendors</span>
               </li>
               <li className="flex items-start">
                 <span className="text-blue-500 mr-2">•</span>
-                <span>Security buying signal detection with strength scoring</span>
+                <span>Buying signal detection with strength scoring</span>
               </li>
               <li className="flex items-start">
                 <span className="text-blue-500 mr-2">•</span>
@@ -210,12 +210,12 @@ export const WelcomeModal: React.FC<WelcomeModalProps> = ({ onClose }) => {
               </li>
               <li className="flex items-start">
                 <span className="text-blue-500 mr-2">•</span>
-                <span>Industry and security trend analysis</span>
+                <span>Industry and market trend analysis</span>
               </li>
             </ul>
             
             <div className="bg-blue-50 p-3 rounded-md text-xs text-blue-700">
-              <strong>Pro Tip:</strong> Focus on leads with strong security buying signals first, and use the AI-suggested talking points to personalize your outreach.
+              <strong>Pro Tip:</strong> Focus on leads with strong buying signals first, and use the AI-suggested talking points to personalize your outreach.
             </div>
           </div>
         );
@@ -236,7 +236,7 @@ export const WelcomeModal: React.FC<WelcomeModalProps> = ({ onClose }) => {
             <ul className="space-y-1 text-sm text-gray-600 mb-4">
               <li className="flex items-start">
                 <span className="text-blue-500 mr-2">•</span>
-                <span>Template library with proven, high-converting security-focused formats</span>
+                <span>Template library with proven, high-converting formats</span>
               </li>
               <li className="flex items-start">
                 <span className="text-blue-500 mr-2">•</span>
@@ -254,10 +254,14 @@ export const WelcomeModal: React.FC<WelcomeModalProps> = ({ onClose }) => {
                 <span className="text-blue-500 mr-2">•</span>
                 <span>Email quality check with AI recommendations</span>
               </li>
+              <li className="flex items-start">
+                <span className="text-blue-500 mr-2">•</span>
+                <span>CRM template synchronization (HubSpot & Salesforce)</span>
+              </li>
             </ul>
             
             <div className="bg-blue-50 p-3 rounded-md text-xs text-blue-700">
-              <strong>Pro Tip:</strong> Start with a template, then use the AI to adjust the tone and personalize based on your target audience's security concerns. The quality check will ensure high deliverability.
+              <strong>Pro Tip:</strong> Start with a template, then use the AI to adjust the tone and personalize based on your target audience's specific needs. The quality check will ensure high deliverability.
             </div>
           </div>
         );
@@ -295,6 +299,10 @@ export const WelcomeModal: React.FC<WelcomeModalProps> = ({ onClose }) => {
               <li className="flex items-start">
                 <span className="text-blue-500 mr-2">•</span>
                 <span>Performance analytics for each sequence step</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-blue-500 mr-2">•</span>
+                <span>Direct HubSpot and Salesforce sequence sync</span>
               </li>
             </ul>
             
@@ -338,6 +346,10 @@ export const WelcomeModal: React.FC<WelcomeModalProps> = ({ onClose }) => {
                 <span className="text-blue-500 mr-2">•</span>
                 <span>AI-generated insights with actionable recommendations</span>
               </li>
+              <li className="flex items-start">
+                <span className="text-blue-500 mr-2">•</span>
+                <span>CRM analytics sync to track full-funnel performance</span>
+              </li>
             </ul>
             
             <div className="bg-blue-50 p-3 rounded-md text-xs text-blue-700">
@@ -354,7 +366,7 @@ export const WelcomeModal: React.FC<WelcomeModalProps> = ({ onClose }) => {
               </div>
               <div>
                 <h4 className="font-medium text-gray-900 mb-1">Knowledge Library</h4>
-                <p className="text-sm text-gray-600">AI answers grounded in your security documentation</p>
+                <p className="text-sm text-gray-600">AI answers grounded in your sales documentation</p>
               </div>
             </div>
             
@@ -362,7 +374,7 @@ export const WelcomeModal: React.FC<WelcomeModalProps> = ({ onClose }) => {
             <ul className="space-y-1 text-sm text-gray-600 mb-4">
               <li className="flex items-start">
                 <span className="text-blue-500 mr-2">•</span>
-                <span>Document repository for company materials and security knowledge</span>
+                <span>Document repository for company materials and sales knowledge</span>
               </li>
               <li className="flex items-start">
                 <span className="text-blue-500 mr-2">•</span>
@@ -383,7 +395,7 @@ export const WelcomeModal: React.FC<WelcomeModalProps> = ({ onClose }) => {
             </ul>
             
             <div className="bg-blue-50 p-3 rounded-md text-xs text-blue-700">
-              <strong>Pro Tip:</strong> Upload your product documentation, case studies, and security collateral to ensure the AI gives accurate, consistent answers to prospects' questions.
+              <strong>Pro Tip:</strong> Upload your product documentation, case studies, and sales collateral to ensure the AI gives accurate, consistent answers to prospects' questions.
             </div>
           </div>
         );
@@ -396,7 +408,7 @@ export const WelcomeModal: React.FC<WelcomeModalProps> = ({ onClose }) => {
               </div>
               <div>
                 <h4 className="font-medium text-gray-900 mb-1">AI Support</h4>
-                <p className="text-sm text-gray-600">AI-powered assistance for your product and security questions</p>
+                <p className="text-sm text-gray-600">AI-powered assistance for your product and sales questions</p>
               </div>
             </div>
             
@@ -408,7 +420,7 @@ export const WelcomeModal: React.FC<WelcomeModalProps> = ({ onClose }) => {
               </li>
               <li className="flex items-start">
                 <span className="text-blue-500 mr-2">•</span>
-                <span>Knowledge-grounded responses to security questions</span>
+                <span>Knowledge-grounded responses to sales questions</span>
               </li>
               <li className="flex items-start">
                 <span className="text-blue-500 mr-2">•</span>
@@ -421,6 +433,10 @@ export const WelcomeModal: React.FC<WelcomeModalProps> = ({ onClose }) => {
               <li className="flex items-start">
                 <span className="text-blue-500 mr-2">•</span>
                 <span>Conversation history and customer context retention</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-blue-500 mr-2">•</span>
+                <span>Customer-facing chatbot integration</span>
               </li>
             </ul>
             
@@ -464,6 +480,10 @@ export const WelcomeModal: React.FC<WelcomeModalProps> = ({ onClose }) => {
                 <span className="text-blue-500 mr-2">•</span>
                 <span>Comprehensive audit logging and violation tracking</span>
               </li>
+              <li className="flex items-start">
+                <span className="text-blue-500 mr-2">•</span>
+                <span>OAuth integration security for CRM and social platforms</span>
+              </li>
             </ul>
             
             <div className="bg-blue-50 p-3 rounded-md text-xs text-blue-700">
@@ -481,7 +501,7 @@ export const WelcomeModal: React.FC<WelcomeModalProps> = ({ onClose }) => {
       <div className="bg-white rounded-lg shadow-xl w-full max-w-5xl max-h-[90vh] overflow-y-auto">
         <div className="p-6">
           <div className="flex justify-between items-start">
-            <h2 className="text-2xl font-bold text-gray-900">Welcome to KnoxEngage</h2>
+            <h2 className="text-2xl font-bold text-gray-900">Welcome to Cleengage</h2>
             <button 
               onClick={onClose}
               className="text-gray-400 hover:text-gray-500 transition-colors"
@@ -491,7 +511,7 @@ export const WelcomeModal: React.FC<WelcomeModalProps> = ({ onClose }) => {
           </div>
           
           <p className="mt-4 text-gray-600">
-            This advanced AI platform guides you through personalized engagement with cybersecurity-grade precision, from defining your ICP to launching multi-touch email sequences.
+            This advanced AI platform guides you through personalized engagement with your prospects, from defining your ICP to launching multi-touch email sequences with CRM synchronization.
           </p>
           
           <div className="mt-6">

@@ -68,15 +68,15 @@ function App() {
             <div className="flex items-center">
               <div className="flex items-center">
                 <img 
-                  src="/images/accuknox logo.png" 
-                  alt="AccuKnox Logo" 
+                  src="/images/Cleeng logo.png" 
+                  alt="Cleeng Logo" 
                   className="h-8 w-auto mr-2"
                 />
                 <h1 className="text-2xl font-bold text-gray-900">
-                  <span className="text-knox-blue-600">Knox</span>Engage
+                  <span className="text-cleeng-blue-600">Cle</span>engage
                 </h1>
               </div>
-              <p className="ml-4 text-sm text-gray-500 hidden md:block">Securing Conversations. Scaling Sales.</p>
+              <p className="ml-4 text-sm text-gray-500 hidden md:block">AI-powered outreach and CRM sync platform</p>
             </div>
           </div>
         </div>
