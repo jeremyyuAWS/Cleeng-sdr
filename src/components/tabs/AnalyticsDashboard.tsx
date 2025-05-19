@@ -292,6 +292,41 @@ export const AnalyticsDashboard: React.FC = () => {
     </div>
   );
 
+  // Add the missing renderEmailFunnel function
+  const renderEmailFunnel = () => (
+    <div className="relative h-80">
+      <div className="absolute inset-0 flex flex-col items-center">
+        {/* Funnel visualization */}
+        <div className="w-full max-w-xl">
+          {[
+            { stage: "Delivered", percentage: 100, count: 5000, color: "bg-knox-blue-500" },
+            { stage: "Opened", percentage: 42, count: 2100, color: "bg-knox-blue-600" },
+            { stage: "Clicked", percentage: 18, count: 900, color: "bg-knox-teal-500" },
+            { stage: "Responded", percentage: 8, count: 400, color: "bg-knox-teal-600" },
+            { stage: "Meeting Booked", percentage: 2, count: 100, color: "bg-green-500" }
+          ].map((stage, index) => (
+            <div key={index} className="mb-4 flex items-center">
+              <div className="w-32 text-right mr-4">
+                <p className="text-sm font-medium text-gray-700">{stage.stage}</p>
+                <p className="text-xs text-gray-500">{stage.count.toLocaleString()}</p>
+              </div>
+              <div className="flex-1 h-10 bg-gray-100 rounded-lg overflow-hidden">
+                <div 
+                  className={`h-full ${stage.color} transition-all duration-500 ease-out`}
+                  style={{ width: `${stage.percentage}%` }}
+                >
+                  <div className="h-full flex items-center justify-end pr-2">
+                    <span className="text-xs font-medium text-white">{stage.percentage}%</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+
   // New security-focused audience tab content
   const renderSecurityAudienceTab = () => (
     <div className="space-y-6">
@@ -366,6 +401,67 @@ export const AnalyticsDashboard: React.FC = () => {
           </div>
         </Card>
       </div>
+    </div>
+  );
+
+  // Add the missing renderEmailPerformanceTab function
+  const renderEmailPerformanceTab = () => (
+    <div className="space-y-6">
+      <Card title="Email Performance Over Time">
+        <div className="h-64 flex items-center justify-center">
+          <p className="text-gray-500">Email performance visualization will be implemented in a future update.</p>
+        </div>
+      </Card>
+      
+      <Card title="Top Performing Subject Lines">
+        <div className="space-y-4">
+          {[
+            { subject: "Critical Container Security Vulnerabilities Discovered", openRate: 58, replyRate: 8.2 },
+            { subject: "Key Findings: Runtime Security Assessment", openRate: 52, replyRate: 7.1 },
+            { subject: "Container Security Benchmark Report: [Company] Analysis", openRate: 48, replyRate: 6.5 },
+          ].map((item, index) => (
+            <div key={index} className="p-3 border border-gray-200 rounded-lg hover:bg-gray-50">
+              <div className="flex justify-between items-start">
+                <div>
+                  <h4 className="font-medium text-gray-900">{item.subject}</h4>
+                  <div className="flex space-x-3 mt-1">
+                    <span className="text-xs text-gray-500 flex items-center">
+                      <Mail size={12} className="mr-1" /> 
+                      {item.openRate}% open rate
+                    </span>
+                    <span className="text-xs text-gray-500 flex items-center">
+                      <MessageSquare size={12} className="mr-1" /> 
+                      {item.replyRate}% reply rate
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </Card>
+    </div>
+  );
+
+  // Add the missing renderTimingTab function
+  const renderTimingTab = () => (
+    <div className="space-y-6">
+      <Card title="Best Time to Send Security Emails">
+        <div className="h-64 flex items-center justify-center">
+          <p className="text-gray-500">Send time optimization visualization will be implemented in a future update.</p>
+        </div>
+        
+        <div className="mt-4 bg-blue-50 p-4 rounded-md">
+          <div className="flex items-start">
+            <Sparkles size={18} className="text-knox-blue-600 mt-0.5 mr-2" />
+            <div>
+              <p className="text-sm text-blue-800">
+                <strong>AI Insight:</strong> Tuesday and Wednesday mornings (9-11 AM) show the highest open rates for security-related emails, with 38% higher engagement than other times. Security professionals tend to review vendor emails early in the workweek.
+              </p>
+            </div>
+          </div>
+        </div>
+      </Card>
     </div>
   );
 
